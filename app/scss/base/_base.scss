@@ -75,18 +75,22 @@ table {
     border-collapse: collapse;
 }
 ::-webkit-input-placeholder {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    color: $light-300;
 }
 ::-moz-placeholder {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    color: $light-300;
     opacity: 1;
 }
 :-moz-placeholder {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    color: $light-300;
     opacity: 1;
 }
 :-ms-input-placeholder {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    color: $light-300;
 }
 :focus::-webkit-input-placeholder {
     color: transparent;

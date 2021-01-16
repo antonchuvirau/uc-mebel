@@ -41,7 +41,8 @@
 
 // 2. Vendors
 @import
-  'vendors/normalize';
+  'vendors/normalize',
+  'vendors/noUi';
 
 // 3. Base stuff
 @import
@@ -60,7 +61,8 @@
 @import
   'components/catalog-navigation',
   'components/filter-form',
-  'components/filter-checkbox';
+  'components/filter-checkbox',
+  'components/range-slider';
 
 // 6. Page-specific styles
 @import

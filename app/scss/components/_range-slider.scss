@@ -1,0 +1,58 @@
+.range-slider {
+    &__header {
+        @include flex(row, center);
+        margin-bottom: 25px
+    }
+    &__manual-input {
+        @include flex(row, center);
+        font-size: 1.4rem;
+        color: $dark;
+        font-weight: 500;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        & input {
+            width: 75px;
+            height: 35px;
+            background: $white;
+            padding: 0 10px;
+            margin-left: 10px;
+            color: $dark;
+        }
+    }
+    &__box {
+        &.noUi-target {
+            border: none;
+            background: $light-300;
+            border-radius: 15px;
+            box-shadow: none;
+            height: 3px;
+        }
+        &.noUi-horizontal {
+            & .noUi-handle {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 3px solid $primary;
+                box-shadow: none;
+                right: -10px;
+                &::after {
+                    content: none;
+                }
+                &::before {
+                    content: none;
+                }
+                &:focus {
+                    outline-style: none;
+                }
+                &-upper {
+                    right: -7px;
+                }
+            }
+        }
+        & .noUi-connect {
+            background: $primary;
+        }
+    }
+}
