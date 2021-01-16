@@ -42,7 +42,8 @@
 // 2. Vendors
 @import
   'vendors/normalize',
-  'vendors/noUi';
+  'vendors/noUi',
+  'vendors/swiper';
 
 // 3. Base stuff
 @import
@@ -55,7 +56,9 @@
 @import
   'layout/header',
   'layout/footer',
-  'layout/catalog-sidebar';
+  'layout/catalog-sidebar',
+  'layout/catalog-products-list',
+  'layout/catalog-template';
 
 // 5. Components
 @import
@@ -63,7 +66,11 @@
   'components/catalog-navigation',
   'components/filter-form',
   'components/filter-checkbox',
-  'components/range-slider';
+  'components/range-slider',
+  'components/catalog-sort',
+  'components/help-box',
+  'components/catalog-pagination',
+  'components/catalog-product';
 
 // 6. Page-specific styles
 @import

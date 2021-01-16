@@ -4,6 +4,7 @@
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
 const rangeSliderFromInputElement = document.querySelector(`input[name="range-slider-from-value"]`);
 const rangeSliderToInputElement = document.querySelector(`input[name="range-slider-to-value"]`);
+const catalogProductCarouselCollection = document.querySelectorAll(`.catalog-product__carousel-box`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -33,5 +34,23 @@ document.addEventListener(`DOMContentLoaded`, () => {
         rangeSliderToInputElement.addEventListener(`change`, function() {
             rangeSliderBox.noUiSlider.set([null, this.value]);
         });
+    }
+    // Init catalog product carousel
+    if (catalogProductCarouselCollection.length) {
+        for (const catalogProductCarousel of catalogProductCarouselCollection) {
+            new Swiper(catalogProductCarousel, {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                pagination: {
+                    el: catalogProductCarousel.closest(`.catalog-product`).querySelector(`.swiper-pagination`)
+                },
+                navigation: {
+                    prevEl: catalogProductCarousel.closest(`.catalog-product`).querySelector(`.catalog-product__carousel-button-prev`),
+                    nextEl: catalogProductCarousel.closest(`.catalog-product`).querySelector(`.catalog-product__carousel-button-next`)
+                }
+            });
+        }
     }
 });

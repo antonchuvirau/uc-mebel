@@ -1,0 +1,42 @@
+.catalog-pagination {
+    @include flex(row, center, center);
+    &__nav {
+        @include flex(row, center);
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: $dark;
+        &:hover {
+            opacity: .8;
+        }
+        & svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        &-prev {
+            margin-right: auto;
+        }
+        &-next {
+            margin-left: auto;
+        }
+    }
+    &__number {
+        @include flex(row, center, center);
+        width: 20px;
+        height: 25px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: $dark;
+        margin: 0 5px;
+        border: 1px solid transparent;
+        &_active {
+            border-color: $primary;
+            pointer-events: none;
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.help-box {
+    padding: 40px 0;
+    position: relative;
+    &__img {
+        position: absolute;
+        width: 35%;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    &__button {
+        margin-top: 25px;
+    }
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        line-height: 1.25;
+        color: $dark;
+        font-weight: 600;
+        max-width: 570px;
+    }
+}
