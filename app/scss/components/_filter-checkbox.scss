@@ -1,0 +1,38 @@
+.filter-checkbox {
+    cursor: pointer;
+    position: relative;
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        &:checked {
+            & + .filter-checkbox {
+                &__name {
+                    &::before {
+                        background: $primary icon('check.svg') no-repeat 50% / 8px auto;
+                        border-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    &__name {
+        padding-left: 30px;
+        font-size: 1.5rem;
+        color: $dark;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 0;
+            border-radius: 3px;
+            border: 1px solid $light;
+        }
+    }
+}
