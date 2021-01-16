@@ -1,0 +1,30 @@
+.button {
+    display: inline-block;
+    padding: 0 25px;
+    height: 45px;
+    line-height: 45px;
+    color: $white;
+    font-weight: 600;
+    background: $primary;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        background: darken($primary, 3%);
+    }
+    &:active {
+        background: darken($primary, 5%);
+    }
+    &:disabled {
+        opacity: .6;
+        pointer-events: none;
+    }
+    &_dark {
+        background: $black-500;
+        &:hover {
+            background: darken($black-500, 3%);
+        }
+        &:active {
+            background: darken($black-500, 5%);
+        }
+    }
+}
