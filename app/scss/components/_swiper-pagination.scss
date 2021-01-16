@@ -1,0 +1,7 @@
+.swiper-pagination {
+    @include flex(row, center, center);
+    width: 100%;
+    bottom: 15px;
+    left: 0;
+    z-index: 1;
+}

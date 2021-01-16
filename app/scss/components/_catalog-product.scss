@@ -1,1 +1,77 @@
-.catalog-product {}
+.catalog-product {
+    position: relative;
+    @include flex(column, stretch);
+    padding: 20px;
+    background: $white;
+    border: 1px solid $light;
+    &__carousel {
+        position: relative;
+        &-pagination {
+            & .swiper-pagination-bullet {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                opacity: 1;
+                background: $black-500;
+                margin: 0 5px;
+                &-active {
+                    background: $white;
+                }
+            }
+        }
+        &-button {
+            position: absolute;
+            top: 50%;
+            margin-top: -12.5px;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: $white;
+            box-shadow: 0 0 5px 0 rgba($dark, .05);
+            z-index: 1;
+            &-prev {
+                left: -12.5px;
+            }
+            &-next {
+                left: auto;
+                right: -12.5px;
+            }
+            & svg {
+                pointer-events: none;
+            }
+            &.swiper-button-disabled {
+                & svg {
+                    & path {
+                        fill: $light;
+                    }
+                }
+            }
+        }
+    }
+    &__img {
+        border-radius: 5px;
+    }
+    &__title {
+        margin: 0;
+        font-size: 1.8rem;
+        line-height: 1.25;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 15px;
+        color: $dark;
+    }
+    &__options {
+        margin-top: 15px;
+    }
+    &__footer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    &:hover {
+        // box-shadow: 0 0 12px 0 rgba($dark, .07);
+        // border-color: $white;
+    }
+}

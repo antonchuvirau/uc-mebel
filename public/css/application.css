@@ -4880,3 +4880,94 @@ table {
       pointer-events: none; }
     .catalog-pagination__number:hover {
       opacity: .8; }
+
+.catalog-product {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #DADADA; }
+  .catalog-product__carousel {
+    position: relative; }
+    .catalog-product__carousel-pagination .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      opacity: 1;
+      background: #3F3F3F;
+      margin: 0 5px; }
+      .catalog-product__carousel-pagination .swiper-pagination-bullet-active {
+        background: #fff; }
+    .catalog-product__carousel-button {
+      position: absolute;
+      top: 50%;
+      margin-top: -12.5px;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #fff;
+      -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+              box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+      z-index: 1; }
+      .catalog-product__carousel-button-prev {
+        left: -12.5px; }
+      .catalog-product__carousel-button-next {
+        left: auto;
+        right: -12.5px; }
+      .catalog-product__carousel-button svg {
+        pointer-events: none; }
+      .catalog-product__carousel-button.swiper-button-disabled svg path {
+        fill: #DADADA; }
+  .catalog-product__img {
+    border-radius: 5px; }
+  .catalog-product__title {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #000; }
+  .catalog-product__options {
+    margin-top: 15px; }
+  .catalog-product__footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 100%;
+  bottom: 15px;
+  left: 0;
+  z-index: 1; }

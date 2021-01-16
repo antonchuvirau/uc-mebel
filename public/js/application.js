@@ -20,6 +20,7 @@ const rangeSliderBox = document.querySelector(`.range-slider__box`);
 const rangeSliderFromInputElement = document.querySelector(`input[name="range-slider-from-value"]`);
 const rangeSliderToInputElement = document.querySelector(`input[name="range-slider-to-value"]`);
 const catalogProductCarouselCollection = document.querySelectorAll(`.catalog-product__carousel-box`);
+const catalogProductCollection = document.querySelectorAll(`.catalog-product`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -66,6 +67,12 @@ document.addEventListener(`DOMContentLoaded`, () => {
                     nextEl: catalogProductCarousel.closest(`.catalog-product`).querySelector(`.catalog-product__carousel-button-next`)
                 }
             });
+        }
+    }
+    // Add padding top
+    if (catalogProductCollection.length) {
+        for (const catalogProduct of catalogProductCollection) {
+            catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
         }
     }
 });
