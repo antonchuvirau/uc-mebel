@@ -23,4 +23,21 @@
         height: 100px;
         padding: 15px;
     }
+    &__rating {
+        @include flex(row, center);
+        margin: 20px 0;
+        &-item {
+            @include flex(row, center);
+            margin-right: 20px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $dark;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-stars {
+            margin-left: 5px;
+        }
+    }
 }

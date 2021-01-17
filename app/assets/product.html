@@ -2022,7 +2022,130 @@
             </form>
         </div>
     </div>
-    <div id="add-product-review-modal" class="modal add-product-review-modal"></div>
+    <div id="add-product-review-modal" class="modal add-product-review-modal">
+        <div class="modal__grid">
+            <p class="modal__title">Оставьте свой отзыв</p>
+            <form class="form modal__form">
+                <div class="form__row">
+                    <input type="text" name="name" class="form__input" placeholder="Ваше имя">
+                </div>
+                <div class="form__row form__rating">
+                    <div class="form__rating-item">
+                        Дизайн:
+                        <div class="stars form__rating-stars" data-rating-name="design" data-stars="5">
+                            <svg height="16" width="16" class="star rating" data-rating="1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="form__rating-item">
+                        Удобство:
+                        <div class="stars form__rating-stars" data-rating-name="convenience" data-stars="5">
+                            <svg height="16" width="16" class="star rating" data-rating="1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="form__rating-item">
+                        Качество:
+                        <div class="stars form__rating-stars" data-rating-name="quality" data-stars="5">
+                            <svg height="16" width="16" class="star rating" data-rating="1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            <svg height="16" width="16" class="star rating" data-rating="5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="#FFCC49" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78"/>
+                                <mask id="a" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
+                                  <path fill="#fff" fill-rule="evenodd" d="M11.708 14a.667.667 0 01-.309-.075L8 12.15l-3.398 1.776a.668.668 0 01-.965-.705l.647-3.752-2.747-2.656a.668.668 0 01.368-1.139l3.8-.552 1.7-3.417c.224-.454.968-.454 1.193 0l1.699 3.417 3.8.552a.665.665 0 01.368 1.139l-2.747 2.656.647 3.752a.666.666 0 01-.656.78z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <textarea name="message" class="form__input form__textarea" placeholder="Сообщение"></textarea>
+                </div>
+                <input type="hidden" name="rating-design" value="5">
+                <input type="hidden" name="rating-convenience" value="5">
+                <input type="hidden" name="rating-quality" value="5">
+                <button type="submit" class="button form__button modal__form-button">Отправить</button>
+            </form>
+        </div>
+    </div>
     <!-- END modal -->
     <!-- BEGIN scripts -->
     <script src="js/application.js"></script>

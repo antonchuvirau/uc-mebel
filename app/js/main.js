@@ -37,6 +37,7 @@ const productGalleryThumbsBox = document.querySelector(`.product-gallery__thumbs
 const productInfoTabsHeader = document.querySelector(`.product-info-tabs__header`);
 const productInfoTabsButtonCollection = document.querySelectorAll(`.product-info-tabs__button`);
 const productInfoTabsContentCollection = document.querySelectorAll(`.product-info-tabs__content`);
+const ratingStarsCollection = document.querySelectorAll('.form__rating-stars .star');
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -54,16 +55,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
             if (handle) {
                 const handleLastValue = +values[1];
                 rangeSliderToInputElement.value = handleLastValue.toFixed(0);
-            }
-            else {
+            } else {
                 const handleFirstValue = +values[0];
                 rangeSliderFromInputElement.value = handleFirstValue.toFixed(0);
             }
         });
-        rangeSliderFromInputElement.addEventListener(`change`, function() {
+        rangeSliderFromInputElement.addEventListener(`change`, function () {
             rangeSliderBox.noUiSlider.set([this.value, null]);
         });
-        rangeSliderToInputElement.addEventListener(`change`, function() {
+        rangeSliderToInputElement.addEventListener(`change`, function () {
             rangeSliderBox.noUiSlider.set([null, this.value]);
         });
     }
@@ -117,12 +117,24 @@ document.addEventListener(`DOMContentLoaded`, () => {
         });
     }
     // Modal
-    $('[data-modal]').on('click', function() {
+    $('[data-modal]').on('click', function () {
         $($(this).data('modal')).modal();
         return false;
     });
     // Product tabs
     if (productInfoTabsHeader) {
         productInfoTabsHeader.addEventListener(`click`, onProductInfoTabsHeaderClickHandler);
+    }
+    // Rating
+    if (ratingStarsCollection || ratingStarsCollection.length) {
+        ratingStarsCollection.forEach(star => {
+            star.addEventListener('click', (evt) => {
+                const starElement = evt.currentTarget;
+                const ratingName = starElement.parentNode.dataset.ratingName;
+                const ratingValue = starElement.dataset.rating;
+                starElement.parentNode.setAttribute('data-stars', ratingValue);
+                document.querySelector(`input[name="rating-${ratingName}"]`).value = ratingValue;
+            });
+        });
     }
 });
