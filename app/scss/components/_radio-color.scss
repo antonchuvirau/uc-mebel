@@ -1,0 +1,26 @@
+.radio-color {
+    position: relative;
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        &:checked + .radio-color {
+            &__box {
+                border-color: $black-500;
+            }
+        }
+    }
+    &__box {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}

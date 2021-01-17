@@ -10,4 +10,97 @@
             margin-bottom: 0;
         }
     }
+    &__rating {
+        position: relative;
+        top: 10px;
+        @include flex(row, center);
+        margin-left: auto;
+        flex-shrink: 0;
+        &-number {
+            font-size: 1.4rem;
+            margin-left: 5px;
+            font-weight: 500;
+            color: $dark;
+        }
+    }
+    &__header {
+        @include flex();
+        &-title {
+            margin: 0;
+            font-size: 3.2rem;
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+    &__vendor-code {
+        display: block;
+        margin-top: 25px;
+        font-size: 1.2rem;
+        color: $light-400;
+    }
+    &__form {
+        margin-top: 25px;
+        &-colors {
+            margin-top: 25px;
+        }
+        &-options {
+            background: $white;
+            box-shadow: 0 0 15px 0 rgba($dark, .08);
+            padding: 25px 20px;
+        }
+        &-quantity {
+            margin-top: 25px;
+        }
+        &-buttons {
+            @include flex(row, center);
+        }
+        &-button {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &-modal {
+
+            }
+        }
+    }
+    &__desc {
+        margin-bottom: 5px;
+        & ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            & li {
+                font-size: 1.4rem;
+                color: $dark;
+                line-height: 1.45;
+                margin-bottom: 5px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__target-link {
+        text-decoration: none;
+        font-weight: 700;
+        color: $primary;
+        font-size: 1.4rem;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &__price {
+        margin: 0;
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: $dark;
+        line-height: 1.25;
+        &-old {
+            display: block;
+            font-size: 2rem;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+    }
 }

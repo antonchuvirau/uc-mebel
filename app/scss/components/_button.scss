@@ -27,4 +27,17 @@
             background: darken($black-500, 5%);
         }
     }
+    &_secondary {
+        border: 1px solid $primary;
+        background: transparent;
+        color: $primary;
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+        &:active {
+            background: darken($primary, 5%);
+            color: $white;
+        }
+    }
 }

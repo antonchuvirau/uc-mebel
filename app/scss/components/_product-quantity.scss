@@ -28,6 +28,10 @@
         &[data-action="add"]::before {
             background: icon('plus.svg') no-repeat 50% / 8px auto;
         }
+        &_big {
+            width: 40px;
+            height: 40px;
+        }
         &:hover {
             background: $black-500;
             border-color: $black-500;
@@ -46,5 +50,10 @@
         color: $dark;
         padding: 0 5px;
         text-align: center;
+        &_big {
+            width: 50px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
     }
 }
