@@ -1,9 +1,14 @@
 .catalog-product {
     position: relative;
     @include flex(column, stretch);
-    padding: 20px;
     background: $white;
     border: 1px solid $light;
+    &__box {
+        position: relative;
+        padding: 20px;
+        padding-bottom: 15px;
+        z-index: 2;
+    }
     &__carousel {
         position: relative;
         &-pagination {
@@ -53,6 +58,7 @@
         border-radius: 5px;
     }
     &__title {
+        display: block;
         margin: 0;
         font-size: 1.8rem;
         line-height: 1.25;
@@ -62,16 +68,69 @@
         color: $dark;
     }
     &__options {
+        @include flex(row, flex-end);
         margin-top: 15px;
+    }
+    &__price {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $dark;
+        line-height: 1.25;
+        flex-shrink: 0;
+        &-old {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+    }
+    &__vendor-code {
+        display: block;
+        font-size: 1.2rem;
+        color: $black-100;
+        line-height: 1.25;
+    }
+    &__size {
+        display: block;
+        font-size: 1.2rem;
+        margin-top: 8px;
+        line-height: 1.25;
+    }
+    &__rating {
+        margin-left: auto;
+        position: relative;
+        top: -3px;
     }
     &__footer {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        opacity: 0;
+        background: $white;
+        padding: 20px;
+        padding-top: 0;
+        box-shadow: 0 0 12px 0 rgba($dark, .07);
+        transition: opacity .25s ease;
+        z-index: 1;
+        pointer-events: none;
+    }
+    &__form {
+        margin-top: 20px;
+        @include flex(row, center);
+        &-button {
+            flex: 1 1 auto;
+            margin-left: 15px;
+        }
     }
     &:hover {
-        // box-shadow: 0 0 12px 0 rgba($dark, .07);
-        // border-color: $white;
+        border-color: transparent;
+        & .catalog-product {
+            &__footer {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
 }

@@ -1,0 +1,61 @@
+.stars {
+    @include flex();
+    // &:hover {
+    //     & .star path {
+    //         fill: #ffd055 !important;
+    //     }
+    // }
+    & .star {
+        margin-right: 2px;
+        & path {
+            fill: none;
+        }
+        &:hover ~ .star {
+            & polygon {
+                fill: none !important;
+            }
+        }
+    }
+    &[data-stars] {
+        .star {
+            & path {
+                fill: $stars;
+              }
+        }
+    }
+    &[data-stars="1"] {
+        & .star:nth-child(1) ~ .star {
+            & path {
+                fill: none;
+            }
+        }
+    }
+    &[data-stars="2"] {
+        & .star:nth-child(2) ~ .star {
+            & path {
+                fill: none;
+            }
+        }
+    }
+    &[data-stars="3"] {
+        & .star:nth-child(3) ~ .star {
+            & path {
+                fill: none;
+            }
+        }
+    }
+    &[data-stars="4"] {
+        & .star:nth-child(4) ~ .star {
+            & path {
+                fill: none;
+            }
+        }
+    }
+    &[data-stars="5"] {
+        & .star:nth-child(5) ~ .star {
+            & path {
+                fill: none;
+            }
+        }
+    }
+}

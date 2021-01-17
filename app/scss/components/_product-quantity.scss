@@ -1,0 +1,50 @@
+.product-quantity {
+    position: relative;
+    @include flex(row, center);
+    &__button {
+        position: relative;
+        @include flex(row, center, center);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid $light;
+        text-align: center;
+        font-size: 1.4rem;
+        color: $dark;
+        line-height: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            margin-top: -4px;
+            margin-left: -4px;
+        }
+        &[data-action="remove"]::before {
+            background: icon('minus.svg') no-repeat 50% / 8px auto;
+        }
+        &[data-action="add"]::before {
+            background: icon('plus.svg') no-repeat 50% / 8px auto;
+        }
+        &:hover {
+            background: $black-500;
+            border-color: $black-500;
+            &[data-action="remove"]::before {
+                background: icon('minus-white.svg') no-repeat 50% / 8px auto;
+            }
+            &[data-action="add"]::before {
+                background: icon('plus-white.svg') no-repeat 50% / 8px auto;
+            }
+        }
+    }
+    &__input {
+        width: 30px;
+        height: 100%;
+        font-size: 1.4rem;
+        color: $dark;
+        padding: 0 5px;
+        text-align: center;
+    }
+}

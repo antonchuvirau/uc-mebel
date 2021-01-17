@@ -1,0 +1,9 @@
+.catalog-product-rating {
+    @include flex();
+    &__number {
+        font-size: 1.4rem;
+        color: $dark;
+        margin-left: 5px;
+        font-weight: 500;
+    }
+}
