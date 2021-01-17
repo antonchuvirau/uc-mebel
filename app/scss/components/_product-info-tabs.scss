@@ -1,0 +1,17 @@
+.product-info-tabs {
+    &__header {
+        border-bottom: 1px solid $black-500;
+    }
+    &__button {
+        padding: 0 40px;
+        height: 50px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $dark;
+        &_active {
+            background: $black-500;
+            color: $white;
+            pointer-events: none;
+        }
+    }
+}

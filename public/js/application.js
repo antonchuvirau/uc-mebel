@@ -27,6 +27,22 @@ function addCatalogproductCustomPadding(catalogProductCollection) {
     }
 }
 
+function onProductInfoTabsHeaderClickHandler(evt) {
+    const target = evt.target;
+
+    if (target.matches(`.product-info-tabs__button`)) {
+        const productInfoTabsButtonIndex = Array.from(productInfoTabsButtonCollection).indexOf(target);
+        for (const productInfoTabsButton of productInfoTabsButtonCollection) {
+            productInfoTabsButton.classList.remove(`product-info-tabs__button_active`);
+        }
+        for (const productInfoTabsContent of productInfoTabsContentCollection) {
+            productInfoTabsContent.classList.remove(`product-info-tabs__content_open`);
+        }
+        target.classList.add(`product-info-tabs__button_active`);
+        productInfoTabsContentCollection[productInfoTabsButtonIndex].classList.add(`product-info-tabs__content_open`);
+    }
+}
+
 // Variables
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
 const rangeSliderFromInputElement = document.querySelector(`input[name="range-slider-from-value"]`);
@@ -36,6 +52,9 @@ const catalogProductCollection = document.querySelectorAll(`.catalog-product`);
 const sectionCarouselCollection = document.querySelectorAll(`.b-section__carousel`);
 const productGalleryBox = document.querySelector(`.product-gallery__box`);
 const productGalleryThumbsBox = document.querySelector(`.product-gallery__thumbs-box`);
+const productInfoTabsHeader = document.querySelector(`.product-info-tabs__header`);
+const productInfoTabsButtonCollection = document.querySelectorAll(`.product-info-tabs__button`);
+const productInfoTabsContentCollection = document.querySelectorAll(`.product-info-tabs__content`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -120,4 +139,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
         $($(this).data('modal')).modal();
         return false;
     });
+    // Product tabs
+    if (productInfoTabsHeader) {
+        productInfoTabsHeader.addEventListener(`click`, onProductInfoTabsHeaderClickHandler);
+    }
 });

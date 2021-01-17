@@ -4801,6 +4801,9 @@ table {
 .product-template__question {
   margin-top: 50px; }
 
+.product-template__tabs {
+  margin-top: 75px; }
+
 .button {
   display: inline-block;
   padding: 0 20px;
@@ -5716,6 +5719,20 @@ table {
     line-height: 1.25; }
   .product-question__button {
     margin-left: 150px; }
+
+.product-info-tabs__header {
+  border-bottom: 1px solid #3F3F3F; }
+
+.product-info-tabs__button {
+  padding: 0 40px;
+  height: 50px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000; }
+  .product-info-tabs__button_active {
+    background: #3F3F3F;
+    color: #fff;
+    pointer-events: none; }
 
 .our-advantages {
   display: -webkit-box;
