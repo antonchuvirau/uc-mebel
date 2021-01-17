@@ -10,3 +10,106 @@
         }
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .catalog-template {
+        &__sidebar {
+            position: relative;
+            @include flex();
+        }
+    }
+    .catalog-sidebar {
+        &__button {
+            @include flex(row, center);
+            width: 50%;
+            flex: 1 1 auto;
+            margin-right: 15px;
+            padding: 0 25px;
+            height: 70px;
+            line-height: 70px;
+            border: 1px solid transparent;
+            &_active {
+                &.catalog-sidebar {
+                    &__button {
+                        &-catalog {
+                            & svg {
+                                transform: rotate(90deg);
+                            }
+                        }
+                        &-filter {
+                            & svg {
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+            & svg {
+                flex-shrink: 0;
+                margin-left: 10px;
+                pointer-events: none;
+                transition: transform .25s ease;
+            }
+            &-catalog {
+                color: $white;
+                background: $primary;
+                font-size: 2.4rem;
+                font-weight: 600;
+                
+            }
+            &-filter {
+                margin-right: 0;
+                justify-content: center;
+                background: $light-100;
+                border-color: $light;
+                font-size: 2rem;
+            }
+        }
+        &__item {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: calc((100% - 15px)/2);
+            flex: 1 1 auto;
+            margin-right: 15px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(3px);
+            transition: opacity .25s ease, transform .25s ease;
+            z-index: 10;
+            &:last-child {
+                margin-right: 0;
+                left: auto;
+                right: 0;
+            }
+            &_open {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+        }
+        &__filter {
+            margin-top: 0;
+        }
+    }
+    .catalog-products-list {
+        &__sort {
+            width: 100%;
+            margin-left: 0;
+        }
+        &__header {
+            padding: 0;
+            margin-top: 15px;
+        }
+        &__box {
+            margin-top: 30px;
+        }
+    }
+    .catalog-sort {
+        &__link {
+            width: calc((100% - 30px)/3);
+            height: 55px;
+            line-height: 55px;
+        }
+    }
+}

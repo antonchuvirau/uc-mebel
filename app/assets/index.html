@@ -31,10 +31,19 @@
         <div class="catalog-template">
             <div class="container top-offset-180">
                 <div class="row">
-                    <div class="col-12 col-lg-3 catalog-template__col">
-                        <h1 class="d-lg-none catalog-template__title">Вся мебель</h1>
+                    <div class="col-12 col-xl-3 catalog-template__col">
+                        <h1 class="d-xl-none catalog-template__title">Вся мебель</h1>
                         <aside class="catalog-sidebar catalog-template__sidebar">
-                            <ul class="list catalog-navigation catalog-sidebar__navigation">
+                            <button type="button" class="d-xl-none catalog-sidebar__button catalog-sidebar__button-catalog">
+                                Каталог
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path fill="#fff" fill-rule="evenodd" d="M15.5 12a.997.997 0 01-.293.707l-4 4a.999.999 0 11-1.414-1.414l3.305-3.305-3.18-3.293a1 1 0 011.439-1.39l3.862 4A.997.997 0 0115.5 12z" clip-rule="evenodd"/>
+                                    <mask id="a" width="7" height="11" x="9" y="7" maskUnits="userSpaceOnUse">
+                                      <path fill="#fff" fill-rule="evenodd" d="M15.5 12a.997.997 0 01-.293.707l-4 4a.999.999 0 11-1.414-1.414l3.305-3.305-3.18-3.293a1 1 0 011.439-1.39l3.862 4A.997.997 0 0115.5 12z" clip-rule="evenodd"/>
+                                    </mask>
+                                </svg>
+                            </button>
+                            <ul class="list catalog-sidebar__item catalog-navigation catalog-sidebar__navigation">
                                 <li class="catalog-navigation__item"><a href="#"
                                         class="catalog-navigation__link catalog-navigation__link_active">Вся мебель</a>
                                 </li>
@@ -59,7 +68,13 @@
                                 <li class="catalog-navigation__item"><a href="#"
                                         class="catalog-navigation__link">Парковки</a></li>
                             </ul>
-                            <div class="catalog-filter catalog-sidebar__filter">
+                            <button type="button" class="d-xl-none catalog-sidebar__button catalog-sidebar__button-filter">
+                                Фильтр
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path fill="#000" d="M16.1 12.6h-3.72v3.64h-1.26V12.6H7.4v-1.18h3.72V7.76h1.26v3.66h3.72v1.18z"/>
+                                </svg>
+                            </button>
+                            <div class="catalog-sidebar__item catalog-filter catalog-sidebar__filter">
                                 <form class="filter-form catalog-filter__form">
                                     <div class="filter-form__section">
                                         <p class="filter-form__section-title">Цена</p>
@@ -122,9 +137,9 @@
                             </div>
                         </aside>
                     </div>
-                    <div class="col-12 col-lg-9 catalog-template__col catalog-products-list">
+                    <div class="col-12 col-xl-9 catalog-template__col catalog-products-list">
                         <header class="catalog-products-list__header">
-                            <p class="catalog-products-list__header-title">Вся мебель</p>
+                            <p class="d-none d-xl-block catalog-products-list__header-title">Вся мебель</p>
                             <div class="catalog-sort catalog-products-list__sort">
                                 <a href="#" class="catalog-sort__link">
                                     <svg class="catalog-sort__link-icon" fill="none" viewBox="0 0 16 16">
@@ -169,7 +184,7 @@
                         </header>
                         <div class="catalog-products-list__box">
                             <div class="row">
-                                <div class="col-4 catalog-products-list__box-col">
+                                <div class="col-12 col-md-6 col-xl-4 catalog-products-list__box-col">
                                     <div class="catalog-product catalog-products-list__box-item">
                                         <span class="product-label product-label_sale catalog-product__label">Акция</span>
                                         <div class="catalog-product__box">
@@ -284,7 +299,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4 catalog-products-list__box-col">
+                                <div class="col-12 col-md-6 col-xl-4 catalog-products-list__box-col">
                                     <div class="catalog-product catalog-products-list__box-item">
                                         <span class="product-label product-label_popular catalog-product__label">Хит продаж</span>
                                         <div class="catalog-product__box">
@@ -399,7 +414,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4 catalog-products-list__box-col">
+                                <div class="col-12 col-md-6 col-xl-4 catalog-products-list__box-col">
                                     <div class="catalog-product catalog-products-list__box-item">
                                         <span class="product-label catalog-product__label">- 30%</span>
                                         <div class="catalog-product__box">
@@ -514,7 +529,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4 catalog-products-list__box-col">
+                                <div class="col-12 col-md-6 col-xl-4 catalog-products-list__box-col">
                                     <div class="catalog-product catalog-products-list__box-item">
                                         <div class="catalog-product__box">
                                             <div class="catalog-product__carousel">

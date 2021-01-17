@@ -25,6 +25,15 @@ function onProductInfoTabsHeaderClickHandler(evt) {
     }
 }
 
+function onCatalogSidebarBoxClickHandler(evt) {
+    const target = evt.target;
+
+    if (target.matches(`.catalog-sidebar__button`)) {
+        target.classList.toggle(`catalog-sidebar__button_active`);
+        target.nextElementSibling.classList.toggle(`catalog-sidebar__item_open`);
+    }
+}
+
 // Variables
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
 const rangeSliderFromInputElement = document.querySelector(`input[name="range-slider-from-value"]`);
@@ -38,6 +47,7 @@ const productInfoTabsHeader = document.querySelector(`.product-info-tabs__header
 const productInfoTabsButtonCollection = document.querySelectorAll(`.product-info-tabs__button`);
 const productInfoTabsContentCollection = document.querySelectorAll(`.product-info-tabs__content`);
 const ratingStarsCollection = document.querySelectorAll('.form__rating-stars .star');
+const catalogSidebarBox = document.querySelector(`.catalog-sidebar`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -136,5 +146,9 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 document.querySelector(`input[name="rating-${ratingName}"]`).value = ratingValue;
             });
         });
+    }
+    // Mobile catalog buttons
+    if (catalogSidebarBox) {
+        catalogSidebarBox.addEventListener(`click`, onCatalogSidebarBoxClickHandler);
     }
 });
