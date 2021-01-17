@@ -1,6 +1,8 @@
 .blocker {
     background: rgba($dark, .2);
+    z-index: 15;
 }
+
 .modal {
     max-width: 425px;
     box-shadow: none;
@@ -26,5 +28,71 @@
     &__form {
         width: 100%;
         text-align: center;
+        &-button {
+            padding: 0 65px;
+        }
+    }
+}
+
+.product-question-modal {
+    &__title {
+        max-width: 190px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+}
+
+.fast-buy-modal {
+    max-width: 795px;
+    &__title {
+        text-align: left;
+        font-size: 3rem;
+    }
+    &__product {
+        @include flex();
+        margin-bottom: 30px;
+        &-img {
+            width: 360px;
+            flex-shrink: 0;
+            & img {
+                border-radius: 5px;
+                max-width: 360px;
+            }
+        }
+        &-info {
+            padding-left: 20px;
+        }
+        &-name {
+            display: block;
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: $dark;
+            margin-bottom: 20px;
+        }
+        &-price {
+            margin: 0;
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: $dark;
+            &-old {
+                display: block;
+                font-size: 2rem;
+                font-weight: normal;
+                line-height: 1.25;
+                text-decoration: line-through;
+            }
+        }
+    }
+    &__note {
+        margin: 0;
+        margin-top: 10px;
+        padding: 15px;
+        font-size: 1.4rem;
+        line-height: 1.35;
+        background: $light-100;
+        & span {
+            font-weight: 700;
+            color: $primary;
+        }
     }
 }

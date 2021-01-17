@@ -1,0 +1,15 @@
+.product-question {
+    @include flex(row, center);
+    padding: 35px;
+    background: image('product-question.svg') no-repeat center right / cover;
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: $white;
+        line-height: 1.25;
+    }
+    &__button {
+        margin-left: 150px;
+    }
+}

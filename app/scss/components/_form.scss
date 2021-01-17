@@ -1,6 +1,9 @@
 .form {
     &__row {
         margin-bottom: 15px;
+        &_horizontal {
+            @include flex(row, center);
+        }
     }
     &__input {
         border: 1px solid $light-400;
@@ -8,8 +11,16 @@
         padding: 0 15px;
         width: 100%;
         color: $dark;
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
         &:focus {
             border-color: $black-300;
         }
+    }
+    &__textarea {
+        height: 100px;
+        padding: 15px;
     }
 }

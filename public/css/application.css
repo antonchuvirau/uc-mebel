@@ -4665,12 +4665,10 @@ table {
 
 .product-template__section {
   position: relative;
-  margin-bottom: 50px;
+  margin-top: 50px;
   z-index: 10; }
   .product-template__section:hover {
     z-index: 11; }
-  .product-template__section:last-child {
-    margin-bottom: 0; }
 
 .product-template__rating {
   position: relative;
@@ -4753,9 +4751,13 @@ table {
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap; }
+        flex-wrap: no-wrap;
+    margin-top: 25px; }
   .product-template__form-button {
-    margin-right: 20px; }
+    margin-right: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
     .product-template__form-button:last-child {
       margin-right: 0; }
 
@@ -4793,9 +4795,15 @@ table {
     font-weight: normal;
     text-decoration: line-through; }
 
+.product-template__advantages {
+  margin-top: 75px; }
+
+.product-template__question {
+  margin-top: 50px; }
+
 .button {
   display: inline-block;
-  padding: 0 25px;
+  padding: 0 20px;
   height: 45px;
   line-height: 45px;
   color: #fff;
@@ -5474,7 +5482,8 @@ table {
     background: #980000; }
 
 .blocker {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 15; }
 
 .modal {
   max-width: 425px;
@@ -5500,18 +5509,107 @@ table {
   .modal__form {
     width: 100%;
     text-align: center; }
+    .modal__form-button {
+      padding: 0 65px; }
+
+.product-question-modal__title {
+  max-width: 190px;
+  margin: 0 auto;
+  margin-bottom: 25px; }
+
+.fast-buy-modal {
+  max-width: 795px; }
+  .fast-buy-modal__title {
+    text-align: left;
+    font-size: 3rem; }
+  .fast-buy-modal__product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    margin-bottom: 30px; }
+    .fast-buy-modal__product-img {
+      width: 360px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+      .fast-buy-modal__product-img img {
+        border-radius: 5px;
+        max-width: 360px; }
+    .fast-buy-modal__product-info {
+      padding-left: 20px; }
+    .fast-buy-modal__product-name {
+      display: block;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 20px; }
+    .fast-buy-modal__product-price {
+      margin: 0;
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: #000; }
+      .fast-buy-modal__product-price-old {
+        display: block;
+        font-size: 2rem;
+        font-weight: normal;
+        line-height: 1.25;
+        text-decoration: line-through; }
+  .fast-buy-modal__note {
+    margin: 0;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    background: #F2F2F2; }
+    .fast-buy-modal__note span {
+      font-weight: 700;
+      color: #6DBFDE; }
 
 .form__row {
   margin-bottom: 15px; }
+  .form__row_horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap; }
 
 .form__input {
   border: 1px solid #c6c6c6;
   height: 50px;
   padding: 0 15px;
   width: 100%;
-  color: #000; }
+  color: #000;
+  margin-right: 20px; }
+  .form__input:last-child {
+    margin-right: 0; }
   .form__input:focus {
     border-color: #7f7f7f; }
+
+.form__textarea {
+  height: 100px;
+  padding: 15px; }
 
 .product-gallery__wrapper {
   position: relative; }
@@ -5591,3 +5689,68 @@ table {
     cursor: pointer; }
     .radio-color__box:hover {
       opacity: .8; }
+
+.product-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  padding: 35px;
+  background: url("../img/product-question.svg") no-repeat center right/cover; }
+  .product-question__title {
+    margin: 0;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25; }
+  .product-question__button {
+    margin-left: 150px; }
+
+.our-advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap; }
+  .our-advantages__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap; }
+    .our-advantages__item-name {
+      font-size: 1.8rem;
+      color: #000;
+      text-align: center;
+      margin-top: 15px; }

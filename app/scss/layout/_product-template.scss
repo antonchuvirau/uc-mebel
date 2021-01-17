@@ -1,13 +1,10 @@
 .product-template {
     &__section {
         position: relative;
-        margin-bottom: 50px;
+        margin-top: 50px;
         z-index: 10;
         &:hover {
             z-index: 11;
-        }
-        &:last-child {
-            margin-bottom: 0;
         }
     }
     &__rating {
@@ -53,14 +50,13 @@
         }
         &-buttons {
             @include flex(row, center);
+            margin-top: 25px;
         }
         &-button {
             margin-right: 20px;
+            flex: 1 1 auto;
             &:last-child {
                 margin-right: 0;
-            }
-            &-modal {
-
             }
         }
     }
@@ -102,5 +98,11 @@
             font-weight: normal;
             text-decoration: line-through;
         }
+    }
+    &__advantages {
+        margin-top: 75px;
+    }
+    &__question {
+        margin-top: 50px;
     }
 }
