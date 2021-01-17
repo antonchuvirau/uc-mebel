@@ -1,0 +1,30 @@
+.blocker {
+    background: rgba($dark, .2);
+}
+.modal {
+    max-width: 425px;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px;
+    padding-top: 30px;
+    & a.close-modal {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+        background: icon('close.svg') no-repeat 50% / 15px auto;
+    }
+    &__title {
+        margin: 0;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: $dark;
+        line-height: 1.25;
+        margin-bottom: 25px;
+    }
+    &__form {
+        width: 100%;
+        text-align: center;
+    }
+}

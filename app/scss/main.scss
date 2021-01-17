@@ -43,7 +43,8 @@
 @import
   'vendors/normalize',
   'vendors/noUi',
-  'vendors/swiper';
+  'vendors/swiper',
+  'vendors/jquerymodal';
 
 // 3. Base stuff
 @import
@@ -75,7 +76,9 @@
   'components/product-quantity',
   'components/stars',
   'components/catalog-product-rating',
-  'components/product-label';
+  'components/product-label',
+  'components/modal',
+  'components/form';
 
 // 6. Page-specific styles
 @import

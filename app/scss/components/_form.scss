@@ -1,0 +1,15 @@
+.form {
+    &__row {
+        margin-bottom: 15px;
+    }
+    &__input {
+        border: 1px solid $light-400;
+        height: 50px;
+        padding: 0 15px;
+        width: 100%;
+        color: $dark;
+        &:focus {
+            border-color: $black-300;
+        }
+    }
+}

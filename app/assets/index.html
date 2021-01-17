@@ -18,6 +18,7 @@
     <!-- temporary -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- temporary -->
     <link href="css/application.css" rel="stylesheet">
 </head>
@@ -662,10 +663,8 @@
                         </div>
                         <div class="catalog-template__help-box help-box">
                             <p class="help-box__title">Вызовите замерщика бесплатно прямо сечас</p>
-                            <button type="button" data-modal-id="#help" class="button help-box__button">Оставить
-                                заявку</button>
-                            <img src="img/help.png" class="help-box__img" srcset="img/help.png 1x, img/help@2x.png 2x"
-                                alt="alt">
+                            <button type="button" data-modal="#help-modal" class="button help-box__button">Оставить заявку</button>
+                            <img src="img/help.png" class="help-box__img" srcset="img/help.png 1x, img/help@2x.png 2x" alt="alt">
                         </div>
                         <div class="catalog-template__text">
                             <p>Детская игровая мебель – неотъемлемый атрибут социализации и развития ребенка. Она
@@ -686,7 +685,20 @@
     <!-- BEGIN footer -->
     <!-- END footer -->
     <!-- BEGIN modal -->
-    <div class="modal"></div>
+    <div id="help-modal" class="modal help-modal">
+        <div class="modal__grid">
+            <p class="modal__title">Вызовите замерщика бесплатно прямо сечас</p>
+            <form class="form modal__form">
+                <div class="form__row">
+                    <input type="text" name="name" class="form__input" placeholder="Ваше имя">
+                </div>
+                <div class="form__row">
+                    <input type="tel" name="tel" class="form__input" placeholder="+ 375 (__) ___-__-__">
+                </div>
+                <button type="submit" class="button form__button modal__form-button">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
     <!-- END modal -->
     <!-- BEGIN scripts -->
     <script src="js/application.js"></script>

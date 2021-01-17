@@ -54,10 +54,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
             });
         }
     }
-    // Add padding top
+    // Add padding to catalog product layout
     if (catalogProductCollection.length) {
         for (const catalogProduct of catalogProductCollection) {
             catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
         }
     }
+    // Modal
+    $('[data-modal]').on('click', function() {
+        $($(this).data('modal')).modal();
+        return false;
+    });
 });
