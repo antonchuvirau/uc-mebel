@@ -1,11 +1,21 @@
 'use strict';
 
+// Function
+function addCatalogproductCustomPadding(catalogProductCollection) {
+    for (const catalogProduct of catalogProductCollection) {
+        catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
+    }
+}
+
 // Variables
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
 const rangeSliderFromInputElement = document.querySelector(`input[name="range-slider-from-value"]`);
 const rangeSliderToInputElement = document.querySelector(`input[name="range-slider-to-value"]`);
 const catalogProductCarouselCollection = document.querySelectorAll(`.catalog-product__carousel-box`);
 const catalogProductCollection = document.querySelectorAll(`.catalog-product`);
+const sectionCarouselCollection = document.querySelectorAll(`.b-section__carousel`);
+const productGalleryBox = document.querySelector(`.product-gallery__box`);
+const productGalleryThumbsBox = document.querySelector(`.product-gallery__thumbs-box`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -37,7 +47,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         });
     }
     // Init catalog product carousel
-    if (catalogProductCarouselCollection.length) {
+    if (catalogProductCarouselCollection || catalogProductCarouselCollection.length) {
         for (const catalogProductCarousel of catalogProductCarouselCollection) {
             new Swiper(catalogProductCarousel, {
                 effect: 'fade',
@@ -54,11 +64,36 @@ document.addEventListener(`DOMContentLoaded`, () => {
             });
         }
     }
-    // Add padding to catalog product layout
-    if (catalogProductCollection.length) {
-        for (const catalogProduct of catalogProductCollection) {
-            catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
+    // Init section carousel
+    if (sectionCarouselCollection || sectionCarouselCollection.length) {
+        for (const sectionCarousel of sectionCarouselCollection) {
+            new Swiper(sectionCarousel, {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                allowTouchMove: false
+            });
         }
+        addCatalogproductCustomPadding(catalogProductCollection);
+    }
+    // Add padding to catalog product layout
+    else if (catalogProductCollection || catalogProductCollection.length) {
+        addCatalogproductCustomPadding(catalogProductCollection);
+    }
+    // Init product gallery
+    if (productGalleryBox) {
+        new Swiper(productGalleryBox, {
+            navigation: {
+                prevEl: productGalleryBox.closest(`.product-gallery`).querySelector(`.product-gallery__button_prev`),
+                nextEl: productGalleryBox.closest(`.product-gallery`).querySelector(`.product-gallery__button_next`)
+            },
+            thumbs: {
+                swiper: {
+                    el: productGalleryThumbsBox,
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            }
+        });
     }
     // Modal
     $('[data-modal]').on('click', function() {

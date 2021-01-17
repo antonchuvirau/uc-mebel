@@ -1,0 +1,15 @@
+.b-section {
+    &__carousel {
+        overflow: visible;
+        z-index: 5;
+    }
+    &__title {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $dark;
+    }
+    &__header {
+        margin-bottom: 25px;
+    }
+}

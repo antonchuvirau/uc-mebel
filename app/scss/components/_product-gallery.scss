@@ -1,0 +1,43 @@
+.product-gallery {
+    &__wrapper {
+        position: relative;
+    }
+    &__img {
+        border-radius: 5px;
+    }
+    &__thumbs {
+        margin-top: 20px;
+        &-img {
+            border-radius: 5px;
+        }
+        &-slide {
+            &.swiper-slide-thumb-active {
+                opacity: .5;
+            }
+        }
+    }
+    &__button {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 0 0 5px 0 rgba($dark, .05);
+        z-index: 1;
+        & svg {
+            pointer-events: none;
+        }
+        &_prev {
+            right: 60px;
+        }
+        &.swiper-button-disabled {
+            & svg {
+                & path {
+                    fill: $light;
+                }
+            }
+        }
+    }
+}

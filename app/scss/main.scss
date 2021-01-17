@@ -59,7 +59,9 @@
   'layout/footer',
   'layout/catalog-sidebar',
   'layout/catalog-products-list',
-  'layout/catalog-template';
+  'layout/catalog-template',
+  'layout/b-section',
+  'layout/product-template';
 
 // 5. Components
 @import
@@ -78,7 +80,8 @@
   'components/catalog-product-rating',
   'components/product-label',
   'components/modal',
-  'components/form';
+  'components/form',
+  'components/product-gallery';
 
 // 6. Page-specific styles
 @import
