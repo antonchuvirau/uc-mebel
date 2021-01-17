@@ -2,8 +2,10 @@
 
 // Function
 function addCatalogproductCustomPadding(catalogProductCollection) {
-    for (const catalogProduct of catalogProductCollection) {
-        catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
+    if (window.innerWidth > 991) {
+        for (const catalogProduct of catalogProductCollection) {
+            catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
+        }
     }
 }
 

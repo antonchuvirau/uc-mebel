@@ -14,4 +14,50 @@
             pointer-events: none;
         }
     }
+    &__content {
+        display: none;
+        padding-top: 30px;
+        &_open {
+            display: block;
+        }
+        & table {
+            & td {
+                padding: 15px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $dark;
+                &:first-child {
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                }
+            }
+            & tr {
+                &:nth-child(odd) {
+                    & td {
+                        background: $light-100;
+                    }
+                }
+            }
+        }
+    }
+    &__text {
+        & p {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.55;
+            color: $dark;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__video {
+        & p {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.55;
+            color: $dark;
+        }
+    }
 }

@@ -5734,6 +5734,148 @@ table {
     color: #fff;
     pointer-events: none; }
 
+.product-info-tabs__content {
+  display: none;
+  padding-top: 30px; }
+  .product-info-tabs__content_open {
+    display: block; }
+  .product-info-tabs__content table td {
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000; }
+    .product-info-tabs__content table td:first-child {
+      font-size: 1.4rem;
+      font-weight: normal; }
+  .product-info-tabs__content table tr:nth-child(odd) td {
+    background: #F2F2F2; }
+
+.product-info-tabs__text p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: #000;
+  margin-bottom: 15px; }
+  .product-info-tabs__text p:last-child {
+    margin-bottom: 0; }
+
+.product-info-tabs__video p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: #000; }
+
+.product-reviews__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  margin-top: 40px; }
+
+.product-reviews__button {
+  padding: 0 75px;
+  height: 50px;
+  line-height: 50px; }
+  .product-reviews__button-show-all {
+    position: relative;
+    margin-left: auto;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6DBFDE;
+    padding-right: 30px; }
+    .product-reviews__button-show-all::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: url("../img/icons/arrow-down.svg") no-repeat 50%/24px auto;
+      top: 50%;
+      margin-top: -12.5px;
+      right: 0; }
+
+.product-reviews__item {
+  position: relative;
+  padding: 40px 0;
+  padding-left: 70px;
+  border-bottom: 1px solid #F2F2F2; }
+  .product-reviews__item:first-child {
+    padding-top: 0; }
+    .product-reviews__item:first-child .product-reviews__item-img {
+      top: 0; }
+  .product-reviews__item-img {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    max-width: 55px;
+    max-height: 55px; }
+  .product-reviews__item-name {
+    display: block;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 10px; }
+  .product-reviews__item-content p {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.55;
+    margin-bottom: 20px; }
+    .product-reviews__item-content p:last-child {
+      margin-bottom: 0; }
+  .product-reviews__item-rating {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap; }
+    .product-reviews__item-rating-value {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: no-wrap;
+          flex-wrap: no-wrap;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #000;
+      margin-right: 45px; }
+      .product-reviews__item-rating-value:last-child {
+        margin-right: 0; }
+    .product-reviews__item-rating-stars {
+      margin-left: 5px; }
+
 .our-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
