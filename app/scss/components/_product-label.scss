@@ -1,0 +1,20 @@
+.product-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    height: 35px;
+    border-bottom-right-radius: 5px;
+    font-size: 1.4rem;
+    color: $white;
+    font-weight: 600;
+    line-height: 35px;
+    background: map-get($label, 'default');
+    z-index: 3;
+    &_sale {
+        background: map-get($label, 'sale');
+    }
+    &_popular {
+        background: map-get($label, 'popular');
+    }
+}

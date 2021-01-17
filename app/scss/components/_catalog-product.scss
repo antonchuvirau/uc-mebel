@@ -3,6 +3,7 @@
     @include flex(column, stretch);
     background: $white;
     border: 1px solid $light;
+    z-index: 1;
     &__box {
         position: relative;
         padding: 20px;
@@ -125,7 +126,8 @@
         }
     }
     &:hover {
-        border-color: transparent;
+        border-color: $white;
+        z-index: 2;
         & .catalog-product {
             &__footer {
                 opacity: 1;
