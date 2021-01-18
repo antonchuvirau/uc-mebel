@@ -32,4 +32,14 @@
             left: calc(100% + 15px);
         }
     }
+    &__pagination {
+        position: absolute;
+        bottom: auto;
+        top: calc(100% + 30px);
+        & .swiper-pagination-bullet {
+            &-active {
+                background: $light-300;
+            }
+        }
+    }
 }

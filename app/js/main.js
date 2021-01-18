@@ -140,6 +140,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                     imagesReady: function() {
                         setTimeout(function() {
                             this.update();
+                            addCatalogproductCustomPadding(catalogProductCollection);
                         }.bind(this), 300);
                     }
                 }
@@ -153,6 +154,9 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 slidesPerView: 4,
                 spaceBetween: 20,
                 allowTouchMove: false,
+                pagination: {
+                    el: sectionCarousel.nextElementSibling
+                },
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
@@ -168,14 +172,17 @@ document.addEventListener(`DOMContentLoaded`, () => {
                         spaceBetween: 20,
                         allowTouchMove: false
                     }
+                },
+                on: {
+                    imagesReady: function() {
+                        setTimeout(function() {
+                            this.update();
+                            addCatalogproductCustomPadding(catalogProductCollection);
+                        }.bind(this), 300);
+                    }
                 }
             });
         }
-        addCatalogproductCustomPadding(catalogProductCollection);
-    }
-    // Add padding to catalog product layout
-    else if (catalogProductCollection || catalogProductCollection.length) {
-        addCatalogproductCustomPadding(catalogProductCollection);
     }
     // Init product gallery
     if (productGalleryBox) {

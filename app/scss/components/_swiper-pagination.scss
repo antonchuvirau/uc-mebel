@@ -1,7 +1,16 @@
 .swiper-pagination {
     @include flex(row, center, center);
     width: 100%;
-    bottom: 15px;
-    left: 0;
     z-index: 1;
+    &-bullet {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        opacity: 1;
+        background: $black-500;
+        margin: 0 5px;
+        &-active {
+            background: $white;
+        }
+    }
 }
