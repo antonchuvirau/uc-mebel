@@ -17,6 +17,12 @@
             position: relative;
             @include flex();
         }
+        &__help-box {
+            margin-top: 30px
+        }
+        &__text {
+            margin-top: 30px
+        }
     }
     .catalog-sidebar {
         &__button {
@@ -103,6 +109,9 @@
         }
         &__box {
             margin-top: 30px;
+            &-col {
+                margin-bottom: 15px;
+            }
         }
     }
     .catalog-sort {
@@ -110,6 +119,197 @@
             width: calc((100% - 30px)/3);
             height: 55px;
             line-height: 55px;
+        }
+    }
+    .catalog-product {
+        &__footer {
+            position: relative;
+            opacity: 1;
+            pointer-events: auto;
+            box-shadow: none;
+        }
+        &__vendor-code {
+            display: none;
+        }
+        &__size {
+            display: none;
+        }
+        &__form {
+            margin-top: 0;
+            &-quantity {
+                display: none;
+            }
+            &-button {
+                margin: 0;
+            }
+        }
+        &__carousel {
+            &-button {
+                display: none;
+            }
+        }
+        &__img {
+            width: 100%;
+        }
+        &__options {
+            margin-top: 30px;
+        }
+        &__price {
+            position: relative;
+            &-old {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+            }
+        }
+        &__title {
+            font-size: 2rem;
+        }
+    }
+    .catalog-pagination {
+        &__nav {
+            font-size: 1.6rem;
+        }
+        &__number {
+            width: 25px;
+            font-size: 1.6rem;
+        }
+    }
+    .help-box {
+        padding: 35px 0;
+        &__title {
+            font-size: 2.8rem;
+            max-width: 400px;
+        }
+        &__button {
+            margin-top: 20px;
+        }
+        &__img {
+            max-width: 320px;
+        }
+    }
+    .catalog-navigation {
+        &__link {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .catalog-template {
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__sidebar {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+    .catalog-sidebar {
+        &__button {
+            width: 100%;
+            margin: 0;
+            justify-content: flex-start;
+            &-filter {
+                margin-top: 15px;
+            }
+        }
+        &__item {
+            width: 100%;
+            margin: 0;
+        }
+        &__filter {
+            top: calc(140px + 15px);
+        }
+    }
+    .catalog-sort {
+        overflow-x: auto;
+        padding-bottom: 15px;
+        &__link {
+            flex-shrink: 0;
+            width: 230px;
+            white-space: nowrap;
+        }
+    }
+    .catalog-products-list {
+        &__box {
+            margin-top: 10px;
+        }
+    }
+    .catalog-product {
+        &__title {
+            margin-top: 20px;
+        }
+    }
+    .help-box {
+        position: relative;
+        padding-top: 260px;
+        &__title {
+            font-size: 2.4rem;
+        }
+        &__button {
+            width: 100%;
+        }
+        &__img {
+            top: 30px;
+            left: 0;
+            width: 100%;
+            max-width: auto;
+            transform: none;
+            max-height: 230px;
+        }
+    }
+    .filter-form {
+        &__section {
+            margin-bottom: 25px;
+            &-box {
+                display: none;
+                margin-top: 15px;
+                &_open {
+                    display: block;
+                }
+            }
+            &-title {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding-right: 30px;
+                cursor: pointer;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    background: icon('arrow-right.svg') no-repeat 50% / 24px auto;
+                    top: 50%;
+                    margin-top: -12.5px;
+                    right: 0;
+                    transition: transform .25s ease;
+                }
+                &_active {
+                    &::after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+        &__button {
+            &-reset {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 15px;
+        &__form {
+            &-button {
+                width: 100%;
+            }
         }
     }
 }

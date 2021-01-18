@@ -125,13 +125,18 @@
             margin-left: 15px;
         }
     }
-    &:hover {
-        border-color: $white;
-        z-index: 2;
-        & .catalog-product {
-            &__footer {
-                opacity: 1;
-                pointer-events: auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .catalog-product {
+        &:hover {
+            border-color: $white;
+            z-index: 2;
+            & .catalog-product {
+                &__footer {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
             }
         }
     }
