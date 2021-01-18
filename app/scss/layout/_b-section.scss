@@ -12,4 +12,24 @@
     &__header {
         margin-bottom: 25px;
     }
+    &__box {
+        position: relative;
+    }
+    &__button {
+        display: none;
+        position: relative;
+        top: 50%;
+        margin-top: -15px;
+        width: 30px;
+        height: 30px;
+        background: $white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 0 rgba($dark, .1);
+        &-prev {
+            right: calc(100% + 15px);
+        }
+        &-next {
+            left: calc(100% + 15px);
+        }
+    }
 }

@@ -53,6 +53,26 @@ function onfilterFormBoxClickHandler(evt) {
     }
 }
 
+function onProductInfoTabsContentBoxClickHandler(evt) {
+    const target = evt.target;
+
+    if (target.matches(`.product-info-tabs__box-button`) && !target.classList.contains(`product-info-tabs__box-button_active`)) {
+        const productInfoTabsBoxButtonIndex = Array.from(productInfoTabsBoxButtonCollection).indexOf(target);
+        for (const productInfoTabsBoxButton of productInfoTabsBoxButtonCollection) {
+            productInfoTabsBoxButton.classList.remove(`product-info-tabs__box-button_active`);
+        }
+        for (const productInfoTabsContent of productInfoTabsContentCollection) {
+            productInfoTabsContent.classList.remove(`product-info-tabs__content_open`);
+        }
+        target.classList.add(`product-info-tabs__box-button_active`);
+        productInfoTabsContentCollection[productInfoTabsBoxButtonIndex].classList.add(`product-info-tabs__content_open`);
+    }
+    else if (target.matches(`.product-info-tabs__box-button`) && target.classList.contains(`product-info-tabs__box-button_active`)) {
+        target.classList.remove(`product-info-tabs__box-button_active`);
+        target.nextElementSibling.classList.remove(`product-info-tabs__content_open`);
+    }
+}
+
 // Variables
 const MAX_CONTAINER_WIDTH = 1199;
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
@@ -70,6 +90,8 @@ const ratingStarsCollection = document.querySelectorAll('.form__rating-stars .st
 const catalogSidebarBox = document.querySelector(`.catalog-sidebar`);
 const catalogSidebarButtonCollection = document.querySelectorAll('.catalog-sidebar__button');
 const filterFormBox = document.querySelector(`.filter-form`);
+const productInfoTabsContentBox = document.querySelector(`.product-info-tabs__box`);
+const productInfoTabsBoxButtonCollection = document.querySelectorAll(`.product-info-tabs__box-button`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -113,6 +135,13 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 navigation: {
                     prevEl: catalogProductCarousel.closest(`.catalog-product`).querySelector(`.catalog-product__carousel-button-prev`),
                     nextEl: catalogProductCarousel.closest(`.catalog-product`).querySelector(`.catalog-product__carousel-button-next`)
+                },
+                on: {
+                    imagesReady: function() {
+                        setTimeout(function() {
+                            this.update();
+                        }.bind(this), 300);
+                    }
                 }
             });
         }
@@ -123,7 +152,23 @@ document.addEventListener(`DOMContentLoaded`, () => {
             new Swiper(sectionCarousel, {
                 slidesPerView: 4,
                 spaceBetween: 20,
-                allowTouchMove: false
+                allowTouchMove: false,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        allowTouchMove: true
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                        allowTouchMove: false
+                    }
+                }
             });
         }
         addCatalogproductCustomPadding(catalogProductCollection);
@@ -143,7 +188,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 swiper: {
                     el: productGalleryThumbsBox,
                     slidesPerView: 4,
-                    spaceBetween: 20
+                    spaceBetween: 20,
+                    breakpoints: {
+                        768: {
+                            spaceBetween: 30
+                        },
+                        1200: {
+                            spaceBetween: 20
+                        }
+                    }
                 }
             }
         });
@@ -156,6 +209,12 @@ document.addEventListener(`DOMContentLoaded`, () => {
     // Product tabs
     if (productInfoTabsHeader) {
         productInfoTabsHeader.addEventListener(`click`, onProductInfoTabsHeaderClickHandler);
+    }
+    if (productInfoTabsContentBox && window.innerWidth < 1200) {
+        productInfoTabsContentBox.addEventListener(`click`, onProductInfoTabsContentBoxClickHandler);
+    }
+    else if (productInfoTabsContentBox) {
+        productInfoTabsContentBox.removeEventListener(`click`, onProductInfoTabsContentBoxClickHandler);
     }
     // Rating
     if (ratingStarsCollection || ratingStarsCollection.length) {
