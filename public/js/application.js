@@ -24,7 +24,9 @@
 function addCatalogproductCustomPadding(catalogProductCollection) {
     if (window.innerWidth > MAX_CONTAINER_WIDTH) {
         for (const catalogProduct of catalogProductCollection) {
-            catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
+            if (!catalogProduct.classList.contains(`b-section__carousel-product`)) {
+                catalogProduct.querySelector(`.catalog-product__footer`).style.paddingTop = `${catalogProduct.offsetHeight}px`;
+            }
         }
     }
 }
@@ -173,15 +175,13 @@ document.addEventListener(`DOMContentLoaded`, () => {
             new Swiper(sectionCarousel, {
                 slidesPerView: 4,
                 spaceBetween: 20,
-                allowTouchMove: false,
                 pagination: {
                     el: sectionCarousel.nextElementSibling
                 },
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: 0,
-                        allowTouchMove: true
+                        spaceBetween: 0
                     },
                     768: {
                         slidesPerView: 2,
@@ -189,8 +189,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                     },
                     1200: {
                         slidesPerView: 4,
-                        spaceBetween: 20,
-                        allowTouchMove: false
+                        spaceBetween: 20
                     }
                 },
                 on: {

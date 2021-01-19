@@ -130,7 +130,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .catalog-product {
+    .catalog-product:not(.b-section__carousel-product) {
         &:hover {
             border-color: $white;
             z-index: 2;

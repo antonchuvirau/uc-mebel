@@ -2,6 +2,24 @@
     &__carousel {
         overflow: visible;
         z-index: 5;
+        &-item {
+            height: auto;
+        }
+        &-product {
+            height: 100%;
+            & .catalog-product {
+                &__footer {
+                    opacity: 1;
+                    position: relative;
+                    box-shadow: none;
+                    pointer-events: auto;
+                    margin-top: auto;
+                }
+            }
+        }
+        & .swiper-wrapper {
+            align-items: stretch;
+        }
     }
     &__title {
         margin: 0;

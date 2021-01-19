@@ -4660,6 +4660,21 @@ table {
 .b-section__carousel {
   overflow: visible;
   z-index: 5; }
+  .b-section__carousel-item {
+    height: auto; }
+  .b-section__carousel-product {
+    height: 100%; }
+    .b-section__carousel-product .catalog-product__footer {
+      opacity: 1;
+      position: relative;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      pointer-events: auto;
+      margin-top: auto; }
+  .b-section__carousel .swiper-wrapper {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
 
 .b-section__title {
   margin: 0;
@@ -5343,10 +5358,10 @@ table {
       margin-left: 15px; }
 
 @media screen and (min-width: 1200px) {
-  .catalog-product:hover {
+  .catalog-product:not(.b-section__carousel-product):hover {
     border-color: #fff;
     z-index: 2; }
-    .catalog-product:hover .catalog-product__footer {
+    .catalog-product:not(.b-section__carousel-product):hover .catalog-product__footer {
       opacity: 1;
       pointer-events: auto; } }
 
