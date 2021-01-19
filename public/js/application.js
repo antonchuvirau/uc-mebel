@@ -178,6 +178,10 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 pagination: {
                     el: sectionCarousel.nextElementSibling
                 },
+                navigation: {
+                    prevEl: sectionCarousel.closest(`.b-section`).querySelector(`.b-section__button-prev`),
+                    nextEl: sectionCarousel.closest(`.b-section`).querySelector(`.b-section__button-next`)
+                },
                 breakpoints: {
                     320: {
                         slidesPerView: 1,

@@ -5,8 +5,10 @@
     border: 1px solid $light;
     z-index: 1;
     &__box {
+        @include flex(column, stretch);
         position: relative;
         padding: 20px;
+        height: 100%;
         padding-bottom: 15px;
         z-index: 2;
     }
@@ -67,12 +69,12 @@
         line-height: 1.25;
         text-decoration: none;
         font-weight: 500;
-        margin-top: 15px;
+        margin: 15px 0;
         color: $dark;
     }
     &__options {
         @include flex(row, flex-end);
-        margin-top: 15px;
+        margin-top: auto;
     }
     &__price {
         margin: 0;
