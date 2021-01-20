@@ -4854,6 +4854,9 @@ table {
 .product-template__tabs {
   margin-top: 75px; }
 
+.product-template__breadcrumbs {
+  margin-bottom: 25px; }
+
 .button {
   display: inline-block;
   padding: 0 20px;
@@ -6000,6 +6003,54 @@ table {
     .product-reviews__item-rating-stars {
       margin-left: 5px; }
 
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  color: #7f7f7f;
+  font-size: 1.4rem;
+  overflow-x: auto;
+  padding-bottom: 15px; }
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+    color: #7f7f7f;
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap; }
+    .breadcrumbs__link::after {
+      content: '/';
+      position: absolute;
+      color: #7f7f7f;
+      font-size: 1.4rem;
+      left: calc(100% + 6px);
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .breadcrumbs__link:hover {
+      opacity: .8; }
+  .breadcrumbs__item {
+    margin-right: 15px; }
+    .breadcrumbs__item:last-child {
+      margin-right: 0; }
+    .breadcrumbs__item span {
+      white-space: nowrap; }
+
 .our-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6351,7 +6402,21 @@ table {
       margin: 0;
       margin-top: 30px; }
   .b-section__button {
-    display: none; } }
+    display: none; }
+  .breadcrumbs__item {
+    font-size: 1.8rem;
+    font-weight: 500; }
+  .breadcrumbs__link {
+    font-size: 1.8rem;
+    font-weight: 500; }
+  .breadcrumbs__item:first-child .breadcrumbs__link {
+    display: block;
+    font-size: 0;
+    width: 25px;
+    height: 25px;
+    background: url("../img/icons/home.svg") no-repeat 50%/24px auto;
+    left: 0;
+    top: 0; } }
 
 @media screen and (max-width: 767px) {
   .button {
@@ -6485,6 +6550,8 @@ table {
     margin-left: auto; }
   .product-template__section {
     margin-top: 65px; }
+  .product-template__breadcrumbs {
+    margin-bottom: 10px; }
   .product-colors__title {
     font-size: 2.4rem; }
   .product-colors__wrapper {

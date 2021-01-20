@@ -1,0 +1,38 @@
+.breadcrumbs {
+    @include flex(row, center);
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    color: $black-300;
+    font-size: 1.4rem;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    &__link {
+        font-size: 1.4rem;
+        color: $black-300;
+        text-decoration: none;
+        position: relative;
+        white-space: nowrap;
+        &::after {
+            content: '/';
+            position: absolute;
+            color: $black-300;
+            font-size: 1.4rem;
+            left: calc(100% + 6px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &__item {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+        & span {
+            white-space: nowrap;
+        }
+    }
+}

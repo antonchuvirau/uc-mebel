@@ -334,6 +334,31 @@
             display: none;
         }
     }
+    .breadcrumbs {
+        &__item {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        &__link {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        &__item {
+            &:first-child {
+                & .breadcrumbs {
+                    &__link {
+                        display: block;
+                        font-size: 0;
+                        width: 25px;
+                        height: 25px;
+                        background: icon('home.svg') no-repeat 50% / 24px auto;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -498,6 +523,9 @@
         }
         &__section {
             margin-top: 65px;
+        }
+        &__breadcrumbs {
+            margin-bottom: 10px;
         }
     }
     .product-colors {
