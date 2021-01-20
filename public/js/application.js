@@ -95,6 +95,26 @@ function onProductInfoTabsContentBoxClickHandler(evt) {
     }
 }
 
+function onFullPropertiesOpenLinkClickHandler(evt) {
+    evt.preventDefault();
+
+    const linkHrefValue = evt.target.getAttribute(`href`);
+    // Open properties tab
+    openProductPropertiesTab(1);
+    document.querySelector(linkHrefValue).scrollIntoView({ behavior: 'smooth', block: 'start'});
+}
+
+function openProductPropertiesTab(productPropertiesTabIndex) {
+    for (const productInfoTabsButton of productInfoTabsButtonCollection) {
+        productInfoTabsButton.classList.remove(`product-info-tabs__button_active`);
+    }
+    for (const productInfoTabsContent of productInfoTabsContentCollection) {
+        productInfoTabsContent.classList.remove(`product-info-tabs__content_open`);
+    }
+    productInfoTabsButtonCollection[productPropertiesTabIndex].classList.add(`product-info-tabs__button_active`);
+    productInfoTabsContentCollection[productPropertiesTabIndex].classList.add(`product-info-tabs__content_open`);
+}
+
 // Variables
 const MAX_CONTAINER_WIDTH = 1199;
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
@@ -114,6 +134,7 @@ const catalogSidebarButtonCollection = document.querySelectorAll('.catalog-sideb
 const filterFormBox = document.querySelector(`.filter-form`);
 const productInfoTabsContentBox = document.querySelector(`.product-info-tabs__box`);
 const productInfoTabsBoxButtonCollection = document.querySelectorAll(`.product-info-tabs__box-button`);
+const fullPropertiesOpenLink = document.querySelector(`.product-template__target-link`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -245,6 +266,9 @@ document.addEventListener(`DOMContentLoaded`, () => {
     }
     else if (productInfoTabsContentBox) {
         productInfoTabsContentBox.removeEventListener(`click`, onProductInfoTabsContentBoxClickHandler);
+    }
+    if (fullPropertiesOpenLink) {
+        fullPropertiesOpenLink.addEventListener(`click`, onFullPropertiesOpenLinkClickHandler);
     }
     // Rating
     if (ratingStarsCollection || ratingStarsCollection.length) {
