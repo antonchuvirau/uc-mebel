@@ -4660,7 +4660,6 @@ table {
   margin-bottom: 35px; }
 
 .b-section__carousel {
-  overflow: visible;
   z-index: 5; }
   .b-section__carousel-item {
     height: auto; }
