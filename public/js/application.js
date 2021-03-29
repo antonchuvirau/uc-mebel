@@ -196,6 +196,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             new Swiper(sectionCarousel, {
                 slidesPerView: 4,
                 spaceBetween: 20,
+                loop: true,
                 pagination: {
                     el: sectionCarousel.nextElementSibling
                 },
