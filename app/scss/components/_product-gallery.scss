@@ -7,10 +7,14 @@
     }
     &__thumbs {
         margin-top: 20px;
+        &-box {
+            width: 100%;
+        }
         &-img {
             border-radius: 5px;
         }
         &-slide {
+            width: calc((100% - 60px)/4);
             &.swiper-slide-thumb-active {
                 opacity: .5;
             }

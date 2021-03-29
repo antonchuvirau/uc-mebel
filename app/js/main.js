@@ -219,7 +219,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             thumbs: {
                 swiper: {
                     el: productGalleryThumbsBox,
-                    slidesPerView: 4,
+                    slidesPerView: `auto`,
                     spaceBetween: 20,
                     breakpoints: {
                         768: {

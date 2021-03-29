@@ -138,9 +138,13 @@
             margin-top: 0;
             &-quantity {
                 display: none;
-            }
-            &-button {
-                margin: 0;
+                & + .catalog-product {
+                    &__form {
+                        &-button {
+                            margin-left: 0;
+                        }
+                    }
+                }
             }
         }
         &__carousel {
@@ -345,9 +349,11 @@
         }
     }
     .breadcrumbs {
+        padding-bottom: 10px;
         &__item {
             font-size: 1.8rem;
             font-weight: 500;
+            white-space: nowrap;
         }
         &__link {
             font-size: 1.8rem;

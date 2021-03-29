@@ -7,6 +7,9 @@
     font-size: 1.4rem;
     overflow-x: auto;
     padding-bottom: 15px;
+    &::-webkit-scrollbar {
+        height: 2px;
+    }
     &__link {
         font-size: 1.4rem;
         color: $black-300;
@@ -28,6 +31,7 @@
     }
     &__item {
         margin-right: 15px;
+        white-space: nowrap;
         &:last-child {
             margin-right: 0;
         }
