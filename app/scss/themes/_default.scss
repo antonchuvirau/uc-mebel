@@ -204,12 +204,13 @@
             position: relative;
             flex-direction: column;
             margin-bottom: 25px;
+            &-title {
+                padding-bottom: 25px;
+            }
         }
         &__rating {
-            position: absolute;
             top: auto;
-            bottom: 0;
-            left: 0;
+            margin-left: 0;
         }
         &__form {
             margin-top: 0;
@@ -229,6 +230,15 @@
         }
         &__vendor-code {
             margin-left: auto;
+            margin-top: 0;
+            & + .product-template {
+                &__rating {
+                    position: absolute;
+                    top: auto;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
         }
         &__price {
             width: 100%;
@@ -477,6 +487,7 @@
             &-title {
                 font-size: 2.6rem;
                 font-weight: 600;
+                padding-bottom: 15px;
             }
         }
         &__price {
@@ -489,7 +500,7 @@
             }
         }
         &__vendor-code {
-            margin-top: 15px;
+            margin-top: 0;
         }
         &__form {
             &-col {
