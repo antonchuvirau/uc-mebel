@@ -5790,10 +5790,13 @@ table {
           align-items: flex-start;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  margin-top: 15px; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px; }
 
 .product-colors__radio {
-  margin-right: 10px; }
+  margin-right: 10px;
+  margin-top: 5px; }
   .product-colors__radio:last-child {
     margin-right: 0; }
 
