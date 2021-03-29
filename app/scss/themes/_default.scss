@@ -115,8 +115,8 @@
         }
     }
     .catalog-sort {
-        &__link {
-            width: calc((100% - 30px)/3);
+        &__select {
+            width: 100%;
             height: 55px;
             line-height: 55px;
         }
@@ -390,15 +390,6 @@
         }
         &__filter {
             top: calc(140px + 15px);
-        }
-    }
-    .catalog-sort {
-        overflow-x: auto;
-        padding-bottom: 15px;
-        &__link {
-            flex-shrink: 0;
-            width: 230px;
-            white-space: nowrap;
         }
     }
     .catalog-products-list {

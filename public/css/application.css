@@ -5055,6 +5055,7 @@ table {
   background: #6DBFDE; }
 
 .catalog-sort {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5070,7 +5071,17 @@ table {
           align-items: center;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap; }
-  .catalog-sort__link {
+  .catalog-sort::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    right: 5px;
+    pointer-events: none;
+    background: url("../img/icons/arrow-down.svg") no-repeat 50%/20px auto; }
+  .catalog-sort__select {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5087,27 +5098,14 @@ table {
     -ms-flex-wrap: no-wrap;
         flex-wrap: no-wrap;
     text-decoration: none;
-    margin-right: 20px;
     border: 1px solid #DADADA;
     height: 40px;
-    width: 150px;
+    min-width: 150px;
     font-size: 1.4rem;
     font-weight: 500;
-    color: #7f7f7f; }
-    .catalog-sort__link:last-child {
-      margin-right: 0; }
-    .catalog-sort__link-icon {
-      width: 16px;
-      height: 16px;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      margin-right: 5px; }
-    .catalog-sort__link:hover {
-      background: #6DBFDE;
-      color: #fff;
-      border-color: #6DBFDE; }
-      .catalog-sort__link:hover svg path {
-        fill: #fff; }
+    color: #7f7f7f;
+    padding: 0 15px;
+    padding-right: 25px; }
 
 .help-box {
   padding: 40px 0;
@@ -6208,8 +6206,8 @@ table {
     margin-top: 30px; }
     .catalog-products-list__box-col {
       margin-bottom: 15px; }
-  .catalog-sort__link {
-    width: calc((100% - 30px)/3);
+  .catalog-sort__select {
+    width: 100%;
     height: 55px;
     line-height: 55px; }
   .catalog-product__footer {
@@ -6444,14 +6442,6 @@ table {
     margin: 0; }
   .catalog-sidebar__filter {
     top: calc(140px + 15px); }
-  .catalog-sort {
-    overflow-x: auto;
-    padding-bottom: 15px; }
-    .catalog-sort__link {
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      width: 230px;
-      white-space: nowrap; }
   .catalog-products-list__box {
     margin-top: 10px; }
   .catalog-product__title {
