@@ -292,3 +292,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
         filterFormBox.addEventListener(`click`, onfilterFormBoxClickHandler);
     }
 });
+
+// JQUERY
+(function($) {
+	$('.swipebox').swipebox();
+})(jQuery);
