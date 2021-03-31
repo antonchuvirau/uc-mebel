@@ -115,6 +115,26 @@ function openProductPropertiesTab(productPropertiesTabIndex) {
     productInfoTabsContentCollection[productPropertiesTabIndex].classList.add(`product-info-tabs__content_open`);
 }
 
+function onSortBoxClickHandler(evt) {
+    const target = evt.target;
+
+    if (target.matches(`.catalog-sort__link`)) {
+        // Checking if we click on active button
+        if (target.classList.contains(`catalog-sort__link_active`)) {
+            target.classList.remove(`catalog-sort__link_active`);
+            return;
+        }
+        // Changing active class
+        const sortValue = target.dataset.sort;
+        console.log(sortValue);
+        const sortButtonCollection = document.querySelectorAll(`.catalog-sort__link`);
+        for (const sortButton of sortButtonCollection) {
+            sortButton.classList.remove(`catalog-sort__link_active`);
+        }
+        target.classList.toggle(`catalog-sort__link_active`);
+    }
+}
+
 // Variables
 const MAX_CONTAINER_WIDTH = 1199;
 const rangeSliderBox = document.querySelector(`.range-slider__box`);
@@ -135,6 +155,7 @@ const filterFormBox = document.querySelector(`.filter-form`);
 const productInfoTabsContentBox = document.querySelector(`.product-info-tabs__box`);
 const productInfoTabsBoxButtonCollection = document.querySelectorAll(`.product-info-tabs__box-button`);
 const fullPropertiesOpenLink = document.querySelector(`.product-template__target-link`);
+const sortBox = document.querySelector(`.catalog-sort`);
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -290,6 +311,10 @@ document.addEventListener(`DOMContentLoaded`, () => {
     // Filter
     if (filterFormBox) {
         filterFormBox.addEventListener(`click`, onfilterFormBoxClickHandler);
+    }
+    // Sorting
+    if (sortBox) {
+        sortBox.addEventListener(`click`, onSortBoxClickHandler);
     }
 });
 
