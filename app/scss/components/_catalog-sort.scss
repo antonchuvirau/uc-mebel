@@ -1,18 +1,8 @@
 .catalog-sort {
     position: relative;
     @include flex(row, center);
-    &::after {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        margin-top: -10px;
-        right: 5px;
-        pointer-events: none;
-        background: icon('arrow-down.svg') no-repeat 50% / 20px auto; 
-    }
     &__select {
+        position: relative;
         @include flex(row, center, center);
         text-decoration: none;
         border: 1px solid $light;
@@ -22,6 +12,40 @@
         font-weight: 500;
         color: $black-300;
         padding: 0 15px;
-        padding-right: 25px;
+        padding-right: 30px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            margin-top: -10px;
+            right: 5px;
+            pointer-events: none;
+            background: icon('arrow-down.svg') no-repeat 50% / 20px auto; 
+        }
+    }
+    &__link {
+        @include flex(row, center, center);
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: $black-300;
+        margin-left: 20px;
+        padding: 0 30px;
+        height: 40px;
+        border: 1px solid $light;
+        &-icon {
+            flex-shrink: 0;
+            margin-right: 5px;
+            pointer-events: none;
+        }
+        &_active {
+            border-color: $primary;
+            background: $primary;
+            color: $white;
+            & path {
+                fill: $white;
+            }
+        }
     }
 }

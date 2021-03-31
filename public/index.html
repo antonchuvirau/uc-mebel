@@ -141,11 +141,22 @@
                         <header class="catalog-products-list__header">
                             <p class="d-none d-xl-block catalog-products-list__header-title">Вся мебель</p>
                             <div class="catalog-sort catalog-products-list__sort">
-                                <select class="catalog-sort__select">
-                                    <option value="0">По цене</option>
-                                    <option value="0">По скидке</option>
-                                    <option value="0">Хиты продаж</option>
-                                </select>
+                                <div class="catalog-sort__select">
+                                    <select>
+                                        <option value="0">По цене - возрастание</option>
+                                        <option value="1">По цене - убывание</option>
+                                    </select>
+                                </div>
+                                <button data-sort="popular" type="button" class="catalog-sort__link catalog-sort__link_active">
+                                    <svg width="16" height="16" class="catalog-sort__link-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                        <path fill="#7F7F7F" fill-rule="evenodd" d="M8 10.7c.106 0 .212.025.308.075l2.513 1.314-.478-2.772a.666.666 0 01.193-.592l2.024-1.958-2.802-.408a.666.666 0 01-.5-.362L8 3.467l-1.258 2.53a.666.666 0 01-.5.362l-2.803.408 2.024 1.958a.666.666 0 01.193.592l-.478 2.772 2.513-1.314A.672.672 0 018 10.7zm3.708 3.27a.664.664 0 01-.309-.075L8 12.119 4.6 13.895a.665.665 0 01-.965-.705l.648-3.752-2.747-2.657a.665.665 0 01.368-1.138l3.8-.552 1.698-3.418c.226-.453.97-.453 1.195 0l1.698 3.418 3.8.552a.665.665 0 01.368 1.138l-2.747 2.657.648 3.752a.667.667 0 01-.656.78z" clip-rule="evenodd"/>
+                                        <mask width="14" height="13" x="1" y="1" maskUnits="userSpaceOnUse">
+                                          <path fill="#fff" fill-rule="evenodd" d="M8 10.7c.106 0 .212.025.308.075l2.513 1.314-.478-2.772a.666.666 0 01.193-.592l2.024-1.958-2.802-.408a.666.666 0 01-.5-.362L8 3.467l-1.258 2.53a.666.666 0 01-.5.362l-2.803.408 2.024 1.958a.666.666 0 01.193.592l-.478 2.772 2.513-1.314A.672.672 0 018 10.7zm3.708 3.27a.664.664 0 01-.309-.075L8 12.119 4.6 13.895a.665.665 0 01-.965-.705l.648-3.752-2.747-2.657a.665.665 0 01.368-1.138l3.8-.552 1.698-3.418c.226-.453.97-.453 1.195 0l1.698 3.418 3.8.552a.665.665 0 01.368 1.138l-2.747 2.657.648 3.752a.667.667 0 01-.656.78z" clip-rule="evenodd"/>
+                                        </mask>
+                                    </svg>
+                                    Хит продаж
+                                </button>
+                                <button data-sort="new" type="button" class="catalog-sort__link">Новинки</button>
                             </div>
                         </header>
                         <div class="catalog-products-list__box">
