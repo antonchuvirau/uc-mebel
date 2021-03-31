@@ -5096,7 +5096,7 @@ table {
     font-weight: 500;
     color: #7f7f7f;
     padding: 0 15px;
-    padding-right: 30px; }
+    padding-right: 0; }
     .catalog-sort__select::after {
       content: '';
       position: absolute;
@@ -5107,6 +5107,10 @@ table {
       right: 5px;
       pointer-events: none;
       background: url("../img/icons/arrow-down.svg") no-repeat 50%/20px auto; }
+    .catalog-sort__select select {
+      width: 100%;
+      height: 100%;
+      padding-right: 30px; }
   .catalog-sort__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5129,7 +5133,8 @@ table {
     margin-left: 20px;
     padding: 0 30px;
     height: 40px;
-    border: 1px solid #DADADA; }
+    border: 1px solid #DADADA;
+    white-space: nowrap; }
     .catalog-sort__link-icon {
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -6257,6 +6262,8 @@ table {
     width: 100%;
     height: 55px;
     line-height: 55px; }
+  .catalog-sort__link {
+    height: 55px; }
   .catalog-product__footer {
     position: relative;
     opacity: 1;
@@ -6692,4 +6699,17 @@ table {
     max-width: 100%;
     padding: 25px 15px; }
     .modal__form-button {
-      width: 100%; } }
+      width: 100%; }
+  .catalog-sort {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .catalog-sort__link {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin: 0;
+      width: 100%;
+      padding: 0 15px;
+      margin-top: 5px; } }
