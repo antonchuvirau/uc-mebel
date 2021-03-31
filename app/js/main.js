@@ -300,5 +300,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
 // JQUERY
 (function($) {
-	$('.swipebox').swipebox();
+    if ($('.swipebox').length) {
+        $('.swipebox').swipebox();
+    }
 })(jQuery);
