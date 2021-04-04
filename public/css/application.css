@@ -6555,8 +6555,11 @@ table {
     font-size: 1.8rem; }
   .b-section__carousel {
     overflow: hidden; }
-  .product-template__section {
-    margin-top: 80px; }
+  .b-section__box {
+    padding-bottom: 30px; }
+  .b-section__pagination {
+    top: auto;
+    bottom: 0; }
   .product-template__header {
     position: relative;
     -webkit-box-orient: vertical;
@@ -6657,30 +6660,29 @@ table {
     -ms-flex-wrap: no-wrap;
         flex-wrap: no-wrap; }
     .product-info-tabs__box-button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: no-wrap;
+          flex-wrap: no-wrap;
       position: relative;
-      display: inline-block;
       font-size: 1.8rem;
       font-weight: 500;
       color: #000;
-      margin-bottom: 30px;
-      padding-right: 30px; }
-      .product-info-tabs__box-button::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        background: url("../img/icons/arrow-right.svg") no-repeat 50%/24px auto;
-        top: 50%;
-        margin-top: -12.5px;
-        right: 0;
-        -webkit-transition: -webkit-transform .25s ease;
-        transition: -webkit-transform .25s ease;
-        -o-transition: transform .25s ease;
-        transition: transform .25s ease;
-        transition: transform .25s ease, -webkit-transform .25s ease; }
+      margin-bottom: 30px; }
       .product-info-tabs__box-button_active {
         margin-bottom: 0; }
-        .product-info-tabs__box-button_active::after {
+        .product-info-tabs__box-button_active svg {
           -webkit-transform: rotate(90deg);
               -ms-transform: rotate(90deg);
                   transform: rotate(90deg); }
@@ -6845,8 +6847,6 @@ table {
   .product-template__form-quantity {
     margin: 0;
     margin-left: auto; }
-  .product-template__section {
-    margin-top: 65px; }
   .product-template__breadcrumbs {
     margin-bottom: 10px; }
   .product-colors__title {
