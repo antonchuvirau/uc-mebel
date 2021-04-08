@@ -1,0 +1,26 @@
+.b-dropdown {
+    border: 1px solid $light;
+    border-left: transparent;
+    background: $white;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: opacity .25s ease, transform .25s ease;
+    &__link {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        padding: 16px 20px;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: $dark;
+        text-decoration: none;
+        &-icon {
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+}

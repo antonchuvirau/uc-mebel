@@ -1,13 +1,14 @@
 .filter-form {
     &__section {
-        margin-bottom: 25px;
+        border-bottom: 1px solid $black-100;
         &-title {
             margin: 0;
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 1.2;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             color: $dark;
+            padding: 10px 20px;
         }
         &-checkbox {
             display: block;
@@ -15,6 +16,10 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        &-box {
+            padding: 20px;
+            padding-top: 5px
         }
     }
     &__footer {

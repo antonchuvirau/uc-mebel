@@ -4,7 +4,7 @@
     &__link {
         display: block;
         text-decoration: none;
-        padding: 20px 30px;
+        padding: 16px 30px;
         color: $dark;
         font-size: 1.5rem;
         line-height: 1.2;
@@ -17,5 +17,23 @@
             background: $primary;
             color: $white;
         }
+    }
+    &__item {
+        position: relative;
+        &:hover {
+            & .catalog-navigation {
+                &__dropdown {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+        }
+    }
+    &__dropdown {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 1px);
+        min-width: 250px;
+        z-index: 5;
     }
 }

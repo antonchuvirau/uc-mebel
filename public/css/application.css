@@ -4842,7 +4842,7 @@ table {
 
 .catalog-sidebar__filter {
   margin-top: 20px;
-  padding: 20px;
+  padding: 20px 0;
   background: #F2F2F2;
   border: 1px solid #ECECEC; }
 
@@ -5140,7 +5140,7 @@ table {
   .catalog-navigation__link {
     display: block;
     text-decoration: none;
-    padding: 20px 30px;
+    padding: 16px 30px;
     color: #000;
     font-size: 1.5rem;
     line-height: 1.2; }
@@ -5151,21 +5151,38 @@ table {
     .catalog-navigation__link:hover {
       background: #6DBFDE;
       color: #fff; }
+  .catalog-navigation__item {
+    position: relative; }
+    .catalog-navigation__item:hover .catalog-navigation__dropdown {
+      opacity: 1;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
+  .catalog-navigation__dropdown {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 1px);
+    min-width: 250px;
+    z-index: 5; }
 
 .filter-form__section {
-  margin-bottom: 25px; }
+  border-bottom: 1px solid #B0B0B0; }
   .filter-form__section-title {
     margin: 0;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: 15px;
-    color: #000; }
+    margin-bottom: 5px;
+    color: #000;
+    padding: 10px 20px; }
   .filter-form__section-checkbox {
     display: block;
     margin-bottom: 20px; }
     .filter-form__section-checkbox:last-child {
       margin-bottom: 0; }
+  .filter-form__section-box {
+    padding: 20px;
+    padding-top: 5px; }
 
 .filter-form__footer {
   display: -webkit-box;
@@ -6344,6 +6361,40 @@ table {
     .breadcrumbs__item span {
       white-space: nowrap; }
 
+.b-dropdown {
+  border: 1px solid #DADADA;
+  border-left: transparent;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+  -webkit-transition: opacity .25s ease, -webkit-transform .25s ease;
+  transition: opacity .25s ease, -webkit-transform .25s ease;
+  -o-transition: opacity .25s ease, transform .25s ease;
+  transition: opacity .25s ease, transform .25s ease;
+  transition: opacity .25s ease, transform .25s ease, -webkit-transform .25s ease; }
+  .b-dropdown__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: nowrap;
+    padding: 16px 20px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #000;
+    text-decoration: none; }
+    .b-dropdown__link-icon {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      margin-right: 5px; }
+    .b-dropdown__link:hover {
+      background: #6DBFDE;
+      color: #fff; }
+
 .our-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6815,7 +6866,7 @@ table {
     .product-template__header-title {
       font-size: 2.6rem;
       font-weight: 600;
-      padding-bottom: 15px; }
+      padding-bottom: 20px; }
   .product-template__price {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
