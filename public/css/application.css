@@ -5138,6 +5138,7 @@ table {
   border: 1px solid #DADADA;
   background: #fff; }
   .catalog-navigation__link {
+    position: relative;
     display: block;
     text-decoration: none;
     padding: 16px 30px;
@@ -5151,20 +5152,37 @@ table {
     .catalog-navigation__link:hover {
       background: #6DBFDE;
       color: #fff; }
+    .catalog-navigation__link-button {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      right: 15px; }
   .catalog-navigation__item {
     position: relative; }
-    .catalog-navigation__item:hover .catalog-navigation__dropdown {
-      opacity: 1;
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none;
-      pointer-events: auto; }
   .catalog-navigation__dropdown {
     position: absolute;
     top: 0;
     left: calc(100% + 1px);
     min-width: 250px;
     z-index: 5; }
+
+@media screen and (min-width: 768px) {
+  .catalog-navigation__item:hover .catalog-navigation__dropdown {
+    opacity: 1;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    pointer-events: auto; } }
+
+@media screen and (max-width: 768px) {
+  .catalog-navigation__dropdown {
+    position: relative;
+    left: auto;
+    top: auto;
+    min-width: none;
+    width: 100%; } }
 
 .filter-form__section {
   border-bottom: 1px solid #B0B0B0; }
@@ -6425,6 +6443,19 @@ table {
       background: #6DBFDE;
       color: #fff; }
 
+@media screen and (max-width: 767px) {
+  .b-dropdown {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    border: none;
+    background: #F2F2F2;
+    -webkit-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    pointer-events: auto;
+    display: none; } }
+
 .show-more {
   position: relative;
   font-size: 1.5rem;
@@ -7019,7 +7050,11 @@ table {
         max-width: 100%;
         margin: 0 auto; }
     .fast-buy-modal__product-info {
-      padding-left: 0; } }
+      padding-left: 0; }
+  .catalog-sort__link {
+    margin-left: 19px; }
+  .catalog-navigation__link {
+    padding: 22px 25px; } }
 
 @media screen and (max-width: 575px) {
   .modal {

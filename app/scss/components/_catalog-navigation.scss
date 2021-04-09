@@ -2,6 +2,7 @@
     border: 1px solid $light;
     background: $white;
     &__link {
+        position: relative;
         display: block;
         text-decoration: none;
         padding: 16px 30px;
@@ -17,18 +18,17 @@
             background: $primary;
             color: $white;
         }
+        &-button {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            right: 15px;
+        }
     }
     &__item {
         position: relative;
-        &:hover {
-            & .catalog-navigation {
-                &__dropdown {
-                    opacity: 1;
-                    transform: none;
-                    pointer-events: auto;
-                }
-            }
-        }
     }
     &__dropdown {
         position: absolute;
@@ -36,5 +36,33 @@
         left: calc(100% + 1px);
         min-width: 250px;
         z-index: 5;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-navigation {
+        &__item {
+            &:hover {
+                & .catalog-navigation {
+                    &__dropdown {
+                        opacity: 1;
+                        transform: none;
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog-navigation {
+        &__dropdown {
+            position: relative;
+            left: auto;
+            top: auto;
+            min-width: none;
+            width: 100%;
+        }
     }
 }

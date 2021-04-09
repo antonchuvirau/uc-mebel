@@ -607,6 +607,16 @@
             }
         }
     }
+    .catalog-sort {
+        &__link {
+            margin-left: 19px;
+        }
+    }
+    .catalog-navigation {
+        &__link {
+            padding: 22px 25px;
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
