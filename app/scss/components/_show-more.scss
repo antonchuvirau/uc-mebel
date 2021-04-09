@@ -1,0 +1,33 @@
+.show-more {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $dark;
+    line-height: 1.2;
+    padding-right: 20px;
+    text-decoration: underline;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: icon('arrow-down-show-more.svg') no-repeat 50% / 15px auto;
+        right: 0;
+        top: 50%;
+        margin-top: -7.5px;
+    }
+    &_active {
+        &::before {
+            transform: scale(-1);
+        }
+    }
+    &:not(.show-more_active) {
+        padding-right: 45px;
+        &::after {
+            content: attr(data-counter);
+            position: absolute;
+            right: 18px;
+            top: .5px;
+        }
+    }
+}

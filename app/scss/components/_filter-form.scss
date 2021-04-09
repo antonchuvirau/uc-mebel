@@ -2,13 +2,42 @@
     &__section {
         border-bottom: 1px solid $black-100;
         &-title {
+            position: relative;
             margin: 0;
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 1.2;
-            margin-bottom: 5px;
             color: $dark;
-            padding: 10px 20px;
+            padding: 12px 20px;
+            &_js {
+                cursor: pointer;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background: icon('arrow-right-filter.svg') no-repeat 50% / 20px auto;
+                    top: 50%;
+                    margin-top: -10px;
+                    right: 20px;
+                    pointer-events: none;
+                }
+                & + .filter-form {
+                    &__section {
+                        &-box {
+                            display: none;
+                            &_open {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            &_active {
+                &::after {
+                    transform: rotate(90deg);
+                }
+            }
         }
         &-checkbox {
             display: block;
@@ -19,7 +48,23 @@
         }
         &-box {
             padding: 20px;
-            padding-top: 5px
+            padding-top: 10px;
+            &_full {
+                & .filter-form {
+                    &__section {
+                        &-property {
+                            &:nth-child(n) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-property {
+            &:nth-child(5n) {
+                display: none;
+            }
         }
     }
     &__footer {

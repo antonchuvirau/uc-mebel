@@ -5,6 +5,7 @@
     opacity: 0;
     transform: translateX(5px);
     transition: opacity .25s ease, transform .25s ease;
+    pointer-events: none;
     &__link {
         display: flex;
         align-items: center;

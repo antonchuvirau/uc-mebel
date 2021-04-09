@@ -49,9 +49,20 @@ function onCatalogSidebarBoxClickHandler(evt) {
 function onfilterFormBoxClickHandler(evt) {
     const target = evt.target;
 
-    if (target.matches(`.filter-form__section-title`) && window.innerWidth < 768) {
+    if (target.matches(`.filter-form__section-title_js`)) {
         target.classList.toggle(`filter-form__section-title_active`);
         target.nextElementSibling.classList.toggle(`filter-form__section-box_open`);
+    }
+    if (target.matches(`.show-more`)) {
+        if (target.classList.contains(`show-more_active`)) {
+            target.textContent = `Доступно ещё: `;
+            target.classList.remove(`show-more_active`);
+            target.parentElement.classList.remove(`filter-form__section-box_full`);
+            return;
+        }
+        target.textContent = `Скрыть`;
+        target.classList.add(`show-more_active`);
+        target.parentElement.classList.add(`filter-form__section-box_full`);
     }
 }
 
@@ -136,6 +147,7 @@ const productInfoTabsContentBox = document.querySelector(`.product-info-tabs__bo
 const productInfoTabsBoxButtonCollection = document.querySelectorAll(`.product-info-tabs__box-button`);
 const fullPropertiesOpenLink = document.querySelector(`.product-template__target-link`);
 const sortBox = document.querySelector(`.catalog-sort`);
+
 
 // Events
 document.addEventListener(`DOMContentLoaded`, () => {

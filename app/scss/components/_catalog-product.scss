@@ -135,6 +135,18 @@
             flex: 1 1 auto;
         }
     }
+    &__label {
+        & + .catalog-product {
+            &__label {
+                top: 50px;
+                & + .catalog-product {
+                    &__label {
+                        top: 100px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
