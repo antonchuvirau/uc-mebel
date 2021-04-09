@@ -6883,37 +6883,11 @@ table {
           -ms-transform: none;
               transform: none;
       max-height: 230px; }
-  .filter-form__section {
-    margin-bottom: 25px; }
-    .filter-form__section-box {
-      display: none;
-      margin-top: 15px; }
-      .filter-form__section-box_open {
-        display: block; }
-    .filter-form__section-title {
-      position: relative;
-      display: inline-block;
-      margin: 0;
-      padding-right: 30px;
-      cursor: pointer; }
-      .filter-form__section-title::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        background: url("../img/icons/arrow-right.svg") no-repeat 50%/24px auto;
-        top: 50%;
-        margin-top: -12.5px;
-        right: 0;
-        -webkit-transition: -webkit-transform .25s ease;
-        transition: -webkit-transform .25s ease;
-        -o-transition: transform .25s ease;
-        transition: transform .25s ease;
-        transition: transform .25s ease, -webkit-transform .25s ease; }
-      .filter-form__section-title_active::after {
-        -webkit-transform: rotate(90deg);
-            -ms-transform: rotate(90deg);
-                transform: rotate(90deg); }
+  .filter-form__section-title {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    padding: 16px 20px; }
   .filter-form__button-reset {
     font-size: 1.4rem; }
   .b-section__title {

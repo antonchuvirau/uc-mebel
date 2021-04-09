@@ -436,36 +436,11 @@
     }
     .filter-form {
         &__section {
-            margin-bottom: 25px;
-            &-box {
-                display: none;
-                margin-top: 15px;
-                &_open {
-                    display: block;
-                }
-            }
             &-title {
                 position: relative;
-                display: inline-block;
                 margin: 0;
-                padding-right: 30px;
                 cursor: pointer;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    background: icon('arrow-right.svg') no-repeat 50% / 24px auto;
-                    top: 50%;
-                    margin-top: -12.5px;
-                    right: 0;
-                    transition: transform .25s ease;
-                }
-                &_active {
-                    &::after {
-                        transform: rotate(90deg);
-                    }
-                }
+                padding: 16px 20px;
             }
         }
         &__button {
