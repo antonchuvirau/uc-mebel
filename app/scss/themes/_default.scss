@@ -196,6 +196,13 @@
     .catalog-navigation {
         &__link {
             font-size: 1.8rem;
+            padding: 21px 20px;
+        }
+        &__item {
+            border-bottom: 1px solid $light;
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
     .b-section {

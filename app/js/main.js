@@ -44,6 +44,10 @@ function onCatalogSidebarBoxClickHandler(evt) {
             target.nextElementSibling.classList.add(`catalog-sidebar__item_open`);
         }
     }
+    if (target.matches(`.catalog-navigation__link-button`)) {
+        target.parentElement.classList.toggle(`catalog-navigation__link_active`);
+        target.parentElement.nextElementSibling.classList.toggle(`b-dropdown_open`);
+    }
 }
 
 function onfilterFormBoxClickHandler(evt) {
@@ -147,6 +151,7 @@ const productInfoTabsContentBox = document.querySelector(`.product-info-tabs__bo
 const productInfoTabsBoxButtonCollection = document.querySelectorAll(`.product-info-tabs__box-button`);
 const fullPropertiesOpenLink = document.querySelector(`.product-template__target-link`);
 const sortBox = document.querySelector(`.catalog-sort`);
+
 
 
 // Events

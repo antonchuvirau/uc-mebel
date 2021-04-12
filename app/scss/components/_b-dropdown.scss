@@ -5,6 +5,7 @@
     opacity: 0;
     transform: translateX(5px);
     transition: opacity .25s ease, transform .25s ease;
+    box-shadow: inset 8px 0px 13px 0 rgba($dark, .04);
     pointer-events: none;
     &__link {
         display: flex;
@@ -22,6 +23,15 @@
         &:hover {
             background: $primary;
             color: $white;
+            & .b-dropdown {
+                &__link {
+                    &-icon {
+                        & path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -35,5 +45,8 @@
         opacity: 1;
         pointer-events: auto;
         display: none;
+        &_open {
+            display: block;
+        }
     }
 }
