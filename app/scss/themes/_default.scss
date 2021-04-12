@@ -116,12 +116,15 @@
     }
     .catalog-sort {
         &__select {
-            width: 100%;
+            width: calc((100% - 15px)/2);
             height: 55px;
             line-height: 55px;
         }
         &__link {
             height: 55px;
+            flex: 1 1 auto;
+            margin-left: 15px;
+            padding: 0 25px;
         }
     }
     .catalog-product {
@@ -638,13 +641,23 @@
         }
     }
     .catalog-sort {
-        flex-direction: column;
+        &__select {
+            width: 230px;
+            flex-shrink: 0;
+        }
         &__link {
             justify-content: flex-start;
             margin: 0;
-            width: 100%;
+            width: 230px;
             padding: 0 15px;
-            margin-top: 5px;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+    }
+    .catalog-products-list {
+        &__sort {
+            overflow-x: auto;
+            padding-bottom: 15px;
         }
     }
 }
