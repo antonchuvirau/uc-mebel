@@ -62,7 +62,7 @@
             }
         }
         &-property {
-            &:nth-child(5n) {
+            &:nth-child(n+5) {
                 display: none;
             }
         }

@@ -5282,7 +5282,7 @@ table {
     padding-top: 10px; }
     .filter-form__section-box_full .filter-form__section-property:nth-child(n) {
       display: block; }
-  .filter-form__section-property:nth-child(5n) {
+  .filter-form__section-property:nth-child(n+5) {
     display: none; }
 
 .filter-form__footer {
