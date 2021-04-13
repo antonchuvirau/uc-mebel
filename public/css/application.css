@@ -4962,6 +4962,8 @@ table {
   z-index: 10; }
   .product-template__section:hover {
     z-index: 11; }
+  .product-template__section:last-child {
+    padding-bottom: 50px; }
 
 .product-template__rating {
   position: relative;

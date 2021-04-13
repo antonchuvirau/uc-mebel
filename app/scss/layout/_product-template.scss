@@ -6,6 +6,9 @@
         &:hover {
             z-index: 11;
         }
+        &:last-child {
+            padding-bottom: 50px;
+        }
     }
     &__rating {
         position: relative;
