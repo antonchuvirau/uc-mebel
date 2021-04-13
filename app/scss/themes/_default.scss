@@ -1,12 +1,13 @@
 .our-advantages {
     @include flex();
     &__item {
-        @include flex(column, center);
+        @include flex(column, center, center);
         &-name {
             font-size: 1.8rem;
             color: $dark;
             text-align: center;
             margin-top: 15px;
+            padding: 0 .83em;
         }
     }
 }

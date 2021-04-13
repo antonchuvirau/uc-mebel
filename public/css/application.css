@@ -6576,9 +6576,9 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -6588,7 +6588,8 @@ table {
       font-size: 1.8rem;
       color: #000;
       text-align: center;
-      margin-top: 15px; }
+      margin-top: 15px;
+      padding: 0 .83em; }
 
 @media screen and (max-width: 1199px) {
   .catalog-template__sidebar {
