@@ -6228,6 +6228,9 @@ table {
     width: 25px;
     height: 25px;
     border: 2px solid transparent;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
     cursor: pointer; }
     .radio-color__box:hover {
       opacity: .8; }
