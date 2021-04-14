@@ -1,5 +1,5 @@
 .our-advantages {
-    @include flex();
+    @include flex(row, flex-start, center);
     &__item {
         @include flex(column, center, center);
         &-name {

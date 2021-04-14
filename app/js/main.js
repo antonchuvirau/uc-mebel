@@ -248,7 +248,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         }
     }
     // Init product gallery
-    if (productGalleryBox) {
+    if (productGalleryBox && productGalleryThumbsBox) {
         new Swiper(productGalleryBox, {
             navigation: {
                 prevEl: productGalleryBox.closest(`.product-gallery`).querySelector(`.product-gallery__button_prev`),
@@ -269,6 +269,14 @@ document.addEventListener(`DOMContentLoaded`, () => {
                     }
                 }
             }
+        });
+    }
+    else {
+        new Swiper(productGalleryBox, {
+            navigation: {
+                prevEl: productGalleryBox.closest(`.product-gallery`).querySelector(`.product-gallery__button_prev`),
+                nextEl: productGalleryBox.closest(`.product-gallery`).querySelector(`.product-gallery__button_next`)
+            },
         });
     }
     // Modal
