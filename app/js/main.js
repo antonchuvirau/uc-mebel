@@ -271,7 +271,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             }
         });
     }
-    else {
+    else if (productGalleryBox) {
         new Swiper(productGalleryBox, {
             navigation: {
                 prevEl: productGalleryBox.closest(`.product-gallery`).querySelector(`.product-gallery__button_prev`),
