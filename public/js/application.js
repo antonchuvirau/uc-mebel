@@ -66,9 +66,10 @@ function onCatalogSidebarBoxClickHandler(evt) {
             target.nextElementSibling.classList.add(`catalog-sidebar__item_open`);
         }
     }
-    if (target.matches(`.catalog-navigation__link-button`)) {
-        target.parentElement.classList.toggle(`catalog-navigation__link_active`);
-        target.parentElement.nextElementSibling.classList.toggle(`b-dropdown_open`);
+    if (target.matches(`.catalog-navigation__item-button`)) {
+        target.classList.toggle(`catalog-navigation__item-button_active`);
+        target.parentElement.querySelector(`.catalog-navigation__link`).classList.toggle(`catalog-navigation__link_active`);
+        target.parentElement.querySelector(`.b-dropdown`).classList.toggle(`b-dropdown_open`);
     }
 }
 

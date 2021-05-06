@@ -22,28 +22,7 @@
                         }
                         
                     }
-                    &-button {
-                        transform: none;
-                        &-icon {
-                            transform: rotate(90deg);
-                            & path {
-                                fill: $white;
-                            }
-                        }
-                    }
                 }
-            }
-        }
-        &-button {
-            @include flex(row, center, center);
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 50%;
-            margin-top: -15px;
-            right: 15px;
-            &-icon {
-                pointer-events: none;
             }
         }
         &-icon {
@@ -53,6 +32,32 @@
     }
     &__item {
         position: relative;
+        &-button {
+            @include flex(row, center, center);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            z-index: 1;
+            &-icon {
+                pointer-events: none;
+            }
+            &_active {
+                transform: rotate(90deg);
+                & .catalog-navigation {
+                    &__item {
+                        &-button {
+                            &-icon {
+                                & path {
+                                    fill: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     &__dropdown {
         position: absolute;
@@ -76,26 +81,24 @@
                                 fill: $white;
                             }
                         }
-                        &-button {
-                            transform: none;
-                            &-icon {
-                                & path {
-                                    fill: $white;
-                                }
-                            }
-                        }
                     }
                     &__dropdown {
                         opacity: 1;
                         transform: none;
                         pointer-events: auto;
                     }
+                    &__item {
+                        &-button {
+                            & path {
+                                fill: $white;
+                            }
+                        }
+                    }
                 }
             }
-        }
-        &__link {
             &-button {
                 pointer-events: none;
+                top: 13px;
             }
         }
     }
