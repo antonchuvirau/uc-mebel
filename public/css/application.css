@@ -5171,7 +5171,9 @@ table {
     .catalog-navigation__link-icon {
       -ms-flex-negative: 0;
           flex-shrink: 0;
-      margin-right: 5px; }
+      margin-right: 5px;
+      max-width: 24px;
+      max-height: 24px; }
   .catalog-navigation__item {
     position: relative; }
     .catalog-navigation__item-button {

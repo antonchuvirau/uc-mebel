@@ -28,6 +28,8 @@
         &-icon {
             flex-shrink: 0;
             margin-right: 5px;
+            max-width: 24px;
+            max-height: 24px;
         }
     }
     &__item {
